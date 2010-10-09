@@ -11,7 +11,7 @@ Material de apoyo para la docencia del Curso de Visualización impartido en Camo
 
 == Data set ==
 
-  *[Datset]
+  * [Datset]
 
 == Visualizaciones ==
 
