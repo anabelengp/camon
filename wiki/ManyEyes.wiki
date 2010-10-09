@@ -6,25 +6,28 @@
 
   * *Bubble chart*: usuarios más activos
     * *Dataset*: hoja de totales [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdFZKZ3k2clQ2Nkxad1NWZVJSQkJBWGc&hl=en#gid=0 Turkey2010_total], tabla Top_authors
-    * Manyeyes: 
+    * *ManyEyes*: 
       * [http://manyeyes.alphaworks.ibm.com/manyeyes/datasets/new Upload data set] 
       *  Copiar/pegar tabla al text área, poner el título, la fuente de datos y los tags
       *  Subir Dataset
       *  Visualizar con *Bubble chart*
   * *Word Cloud Generator*: Palabras más usadas
     * *Dataset*: hoja de totales [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdFZKZ3k2clQ2Nkxad1NWZVJSQkJBWGc&hl=en#gid=0 Turkey2010_total], tabla Top_words
+    * *ManyEyes*: 
       * [http://manyeyes.alphaworks.ibm.com/manyeyes/datasets/new Upload data set] 
       *  Copiar/pegar tabla al text área, poner el título, la fuente de datos y los tags
       *  Subir Dataset
       *  Visualizar con *Word cloud generate*
   * *Stack Graph*: Menciones por países
-      * Dataset: hoja por días y valores [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdE41c2RTWkRDdkx5M3NiZHB2WVhELVE&hl=en#gid=0 turkey2010_day_count] , tabla Countries_day_c_T
-      * *Dataset*: hoja de totales [http://manyeyes.alphaworks.ibm.com/manyeyes/datasets/new Upload data set] 
+    * *Dataset*: hoja por días y valores [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdE41c2RTWkRDdkx5M3NiZHB2WVhELVE&hl=en#gid=0 turkey2010_day_count] , tabla Countries_day_c_T
+    * *ManyEyes*:
+      *  [http://manyeyes.alphaworks.ibm.com/manyeyes/datasets/new Upload data set] 
       *  Copiar/pegar tabla al text área, poner el título, la fuente de datos y los tags
       *  Subir Dataset
       *  Visualizar con *Stack Graph*
   * *TreeMap*: Aplicaciones utilizadas
-      * Dataset: [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdFZKZ3k2clQ2Nkxad1NWZVJSQkJBWGc&hl=en#gid=0 Turkey2010_total] , tabla Top_Apps
+    * *Dataset*: [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdFZKZ3k2clQ2Nkxad1NWZVJSQkJBWGc&hl=en#gid=0 Turkey2010_total] , tabla Top_Apps
+    * *ManyEyes*:
       * [http://manyeyes.alphaworks.ibm.com/manyeyes/datasets/new Upload data set] 
       *  Copiar/pegar tabla al text área, poner el título, la fuente de datos y los tags
       *  Subir Dataset
