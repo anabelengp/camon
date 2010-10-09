@@ -1,3 +1,11 @@
 = Introducción =
 
 Material de apoyo para la docencia del Curso de Visualización impartido en Camon
+
+== Presentaciones ==
+* Presentación Dia 1:
+
+== Data set ==
+
+
+
