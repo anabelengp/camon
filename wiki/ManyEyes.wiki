@@ -5,12 +5,16 @@
 = Visualizaciones =
 
   * *Bubble chart*: usuarios más activos
-    * dataset: hoja de totales [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdFZKZ3k2clQ2Nkxad1NWZVJSQkJBWGc&hl=en#gid=0 Turkey2010_total], tabla Top_authors
+    * Dataset: hoja de totales [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdFZKZ3k2clQ2Nkxad1NWZVJSQkJBWGc&hl=en#gid=0 Turkey2010_total], tabla Top_authors
+    * Manyeyes: 
+      * [ http://manyeyes.alphaworks.ibm.com/manyeyes/page/create_visualization.html Crear visualización]
+      *  Pinchar en [ http://manyeyes.alphaworks.ibm.com/manyeyes/datasets/new upload your own data set] 
+      *  Copiar/pegar tabla al text área, poner el título, la fuente de datos y los tags
+      *  Subir Dataset
+      *  Visualizar con *Bubble chart*
   * *Word Cloud Generator*: Palabras más usadas
     * [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdFZKZ3k2clQ2Nkxad1NWZVJSQkJBWGc&hl=en#gid=0 Turkey2010_total], tabla Top_words
   * *Stack Graph*: Menciones por países
   * *TreeMap*: Aplicaciones utilizadas
   * *World Map* : Menciones a países
   * *Network diagram*: Relaciones entre usuarios
-
-
