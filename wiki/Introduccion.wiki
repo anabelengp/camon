@@ -35,4 +35,24 @@ Se ha utilizado un filtro para excluir autores, hashtags o palabras que puedan t
 
 === Datos elaborados ===
 
-== Visualizacuiones ==
+Contenido:
+  * Usuarios más activos
+  * Palabras más usadas
+  * Aplicaciones  utilizadas
+  * Jugadores más mencionados
+  * Menciones a países
+Desglose:
+  * Total
+  * Día
+  * Hora
+Formatos:
+  * Tabla con valores: 
+    * [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdFZKZ3k2clQ2Nkxad1NWZVJSQkJBWGc&hl=en#gid=0 Turkey2010_total]
+  * Tabla con porcentajes:
+  * Lista con valores y porcentaje:
+
+
+  * Tabla de jugadores:
+  * Tab
+
+== Visualizaciones ==
