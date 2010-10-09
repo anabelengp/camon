@@ -54,7 +54,7 @@ Formatos:
     *  Valores por hora: [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdFgwNm5pdl9tQ3BqMG5jeWRQcDV3b2c&hl=en#gid=0 turkey2010_hour_percent]
   * Lista con valores y porcentaje:
     * Valores totales: [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdFZKZ3k2clQ2Nkxad1NWZVJSQkJBWGc&hl=en#gid=0 Turkey2010_total]
-    * Valores por día: [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdE9XRmE5UnFZLU5qQ3M4MXp1aEVFNXc&hl=en#gid=0 turley_day_lisy]
+    * Valores por día: [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdE9XRmE5UnFZLU5qQ3M4MXp1aEVFNXc&hl=en#gid=0 turley_day_list]
     * Valores por hora: Demasiado grande para google docs.
 
 
