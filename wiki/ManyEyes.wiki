@@ -7,7 +7,7 @@
   * *Bubble chart*: usuarios más activos
     * Dataset: hoja de totales [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdFZKZ3k2clQ2Nkxad1NWZVJSQkJBWGc&hl=en#gid=0 Turkey2010_total], tabla Top_authors
     * Manyeyes: 
-      * [http://manyeyes.alphaworks.ibm.com/manyeyes/datasets/new upload your own data set] 
+      * [http://manyeyes.alphaworks.ibm.com/manyeyes/datasets/new upload data set] 
       *  Copiar/pegar tabla al text área, poner el título, la fuente de datos y los tags
       *  Subir Dataset
       *  Visualizar con *Bubble chart*
