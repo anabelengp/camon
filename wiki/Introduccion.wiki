@@ -7,5 +7,21 @@ Material de apoyo para la docencia del Curso de Visualización impartido en Camo
 
 == Data set ==
 
+===Fuente===
+Se han extraído los tweet con el *Streaming API* de Twitter seleccionando los siguientes palabras claves :
 
+   basket    #basket    baloncesto    #baloncesto    basketball    #basketball    Turkey2010    #Turkey2010    FIBA2010    #FIBA2010    #ang    #arg    #aus    #bra    #can    #chn    #civ    #cro    #esp    #fra    #ger    #gre    #iri    #jor    #lib    #ltu    #nzl    #pur    #rus    #slo    #srb    #tun    #tur    #usa
+
+Al analizar los datos se han encontrados los siguientes problemas:
+
+* *Ambiguación*: Los hashtag de países se utilizan para diferentes significados y los otros a veces van asociados a venta de productos
+* *Spam*: usuarios que envían siempre el mismo mensaje
+* *Exceso de información*: si se le pide al API de Twiter que me de #usa, devuelve todos los tweets que tiene la palabra usa o que tiene  una url con la palabra usa.
+
+Se ha utilizado un filtro para excluir autores, hashtags o palabras que puedan tener distinto significado y se han extraído los tweets que cumplen exclusivamente con las búsqueda solicitada.
+
+  683.289 tweets obtenidos
+  209.585 tweets seleccionados  
+
+=== Datos elaborados ===
 
