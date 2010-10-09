@@ -1,4 +1,4 @@
-= Introducción =
+= Taller Visualización =
 
 Material de apoyo para la docencia del Curso de Visualización impartido en Camon
 
