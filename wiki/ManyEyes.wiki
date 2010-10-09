@@ -1,0 +1,16 @@
+#Taller de visualización con ManyEyes.
+
+= Introduction =
+
+= Visualizaciones =
+
+  * *Bubble chart*: usuarios más activos
+    * dataset: hoja de totales [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdFZKZ3k2clQ2Nkxad1NWZVJSQkJBWGc&hl=en#gid=0 Turkey2010_total], tabla Top_authors
+  * *Word Cloud Generator*: Palabras más usadas
+    * [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdFZKZ3k2clQ2Nkxad1NWZVJSQkJBWGc&hl=en#gid=0 Turkey2010_total], tabla Top_words
+  * *Stack Graph*: Menciones por países
+  * *TreeMap*: Aplicaciones utilizadas
+  * *World Map* : Menciones a países
+  * *Network diagram*: Relaciones entre usuarios
+
+
