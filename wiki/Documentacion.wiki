@@ -1,3 +1,5 @@
+# Documentación del taller de Visualización
+
 = Taller de visualización =
 
 Material de apoyo para la docencia del Curso de Visualización impartido en Camon
