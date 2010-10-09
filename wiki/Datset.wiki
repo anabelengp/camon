@@ -1,4 +1,4 @@
-#Dataset del Turkey2010 obtenido de twitter
+#Dataset del Turkey2010 obtenido de Twitter
 
 = Introdución =
 
@@ -56,4 +56,3 @@ Formatos:
 
   * Tabla de jugadores:
   * Tab
-
