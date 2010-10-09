@@ -26,14 +26,14 @@
       *  Subir Dataset
       *  Visualizar con *Stack Graph*
   * *TreeMap*: Aplicaciones utilizadas
-    * *Dataset*: [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdFZKZ3k2clQ2Nkxad1NWZVJSQkJBWGc&hl=en#gid=0 Turkey2010_total] , tabla Top_Apps
+    * *Dataset*: Hola de Totales [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdFZKZ3k2clQ2Nkxad1NWZVJSQkJBWGc&hl=en#gid=0 Turkey2010_total] , tabla Top_Apps
     * *ManyEyes*:
       * [http://manyeyes.alphaworks.ibm.com/manyeyes/datasets/new Upload data set] 
       *  Copiar/pegar tabla al text área, poner el título, la fuente de datos y los tags
       *  Subir Dataset
       *  Visualizar con *Tree map*
   * *World Map* : Menciones a países
-    * *Dataset*: [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdFZKZ3k2clQ2Nkxad1NWZVJSQkJBWGc&hl=en#gid=0 Turkey2010_total] , tabla Top_Countries 
+    * *Dataset*: Hoja de totales [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdFZKZ3k2clQ2Nkxad1NWZVJSQkJBWGc&hl=en#gid=0 Turkey2010_total] , tabla Top_Countries 
     * *ManyEyes*:
       * [http://manyeyes.alphaworks.ibm.com/manyeyes/datasets/new Upload data set] 
       *  Copiar/pegar tabla al text área, poner el título, la fuente de datos y los tags
