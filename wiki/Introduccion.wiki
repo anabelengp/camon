@@ -3,10 +3,12 @@
 Material de apoyo para la docencia del Curso de Visualización impartido en Camon
 
 == Presentaciones ==
+
+http://code.google.com/p/camon/w/edit/Presentaciones
 * Presentación Dia 1:
 
 == Data set ==
-
+http://code.google.com/p/camon/w/edit/Dataset
 ===Fuente===
 Se han extraído los tweets de las 15:20 del 28-ago-2010 a las 18:15:06  del 13-sep-2010 con el *Streaming API* de Twitter seleccionando los siguientes palabras claves :
 
@@ -62,3 +64,14 @@ Formatos:
   * Tab
 
 == Visualizaciones ==
+
+  * camon/w/edit/manyEyes
+  * http://code.google.com/p/camon/w/edit/GraphViz
+  * http://code.google.com/p/camon/w/edit/Pajek
+  * http://code.google.com/p/camon/w/edit/Gephi
+  * http://code.google.com/p/camon/w/edit/TouchGraph
+
+
+
+
+===  ===
