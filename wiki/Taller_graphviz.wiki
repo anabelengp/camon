@@ -12,8 +12,11 @@ Funciona para plataformas unix/windows/mac y tiene disponible el código fuente.
 
 = Caracteristicas=
 
-  * Permite selecionar la forma y tamaño del nodo: texto, circulo, cuadrado, elipse, imagen
-  * Genera imágenes estáticas,
+  * Permite selecionar [http://www.graphviz.org/doc/info/shapes.htmlla forma] y tamaño del nodo
+  * Los colores no están normalizados, posee su propia tabla de [http://www.graphviz.org/doc/info/colors.html colores]
+  * Tiene un conjunto de [http://www.graphviz.org/doc/info/attrs.htmlatributos configurables] como el font, el color de y tamaño del font, etc..
+  * Es posible controlar, hasta cierto gardo el tamaño de los grafos
+  
 
 
 = Data Set =
