@@ -12,9 +12,8 @@ Funciona para plataformas unix/windows/mac y tiene disponible el código fuente.
 
 = Caracteristicas=
 
-*[http://www.graphviz.org/ Graphviz]* tiene como 
-
-[http://barriblog.com/taller/images/graphviz.jpg]
+  * Permite selecionar la forma y tamaño del nodo: texto, circulo, cuadrado, elipse, imagen
+  * Genera imágenes estáticas,
 
 
 = Data Set =
@@ -38,21 +37,23 @@ Se han eliminado los nodos que no tenían ninguna mención.
   * *dot* Estructura jerárquica, se dibuja de evitando que los arcos se crucen y pasen por encima de los nodos. No es eficiente en el espacio ocupado. Se puede ajustar el tamaño mínimo poniendo los parametros  "_ranksep="0.2 equally" y nodesep="0.2 equally_". (_ranksep_ es la distancia en vertical entre nodos y _nodesep_ es la distancia horizontal entre nodos, en pulgadas)
   * *neato* es un layout _spring model_ que busca la mínima energía entre nodos, basado en el algoritmo *Kamada-Kawai* (no se puede ajustar las distancia entre nodos con los parámetros _ranksep_ y _nodesep_)
   * *fdp* es un layout _spring nodel_ que utiliza springs solo en los nodos conectados con un flecha y fuerzas respulsivas con el resto de los nodos. Implementa el heurístico *Fruchterman-Reingold* (no se puede ajustar las distancia entre nodos con los parámetros _ranksep_ y _nodesep_).
-  * * Twopi* Dibuja un layout radial disponiendo los nodos concentricos a un nodo central en función de su distamcia. En este caso _ranksep_ y _nodesep_ es la distancia radial
+  * * twopi* Dibuja un layout radial disponiendo los nodos concentricos a un nodo central en función de su distamcia. En este caso _ranksep_ y _nodesep_ es la distancia radial
   * *circo* Dispone los nodos de forma circular (no se puede ajustar las distancia entre nodos con los parámetros _ranksep_ y _nodesep_).
 
 == Formatos Salida==
+
+Permite los clasicos formatos de imágenes como jpg, png y gif así como Postscript (ps),o formatos estandarizados por el W3C como sgv, vml
 
 =Prática=
   # Bajar el fichero DOT: [https://docs.google.com/document/edit?id=12-obAlTglu7Gq_ZtKgOUqFOVdNPIwrgmSLu9afXzSuY&hl=en# turkey2010_top_mentions.dot] como texto
   # Abrir el programa graphviz (GVedit.exe)
   # Abrir fichero turkey2010_top_mentions.dot (en local)
   # Seleccionar settings (Graphviz/settings) desde este formulario se pueden seleccionar el layout, el directorio de salida y el formato de salida. Por defecto toma como directorio de salida el mismo del que se encuentra el fichero de entarda .dot
-  # Seleccionar layout dot: y ejecutar. Se verá que el grafo es *muy grande*. Para ajustar tamaño poner los parámetros: *ranksep="0.2 equally" nodesep="0.2 equally*"
-  # Seleccionar layout
-  # Seleccionar layout
-  # Seleccionar layout
-  # Seleccionat layout
+  # Seleccionar layout *dot*: y ejecutar. Se verá que el grafo es *muy grande*. Para ajustar tamaño poner los parámetros: *ranksep="0.2 equally" nodesep="0.2 equally*"
+  # Seleccionar layout *neato*
+  # Seleccionar layout *fdp*
+  # Seleccionar layout *twopi*
+  # Seleccionat layout *circo*
 
 
   
