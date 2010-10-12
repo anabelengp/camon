@@ -13,7 +13,7 @@ Funciona para plataformas unix/windows/mac y tiene disponible el código fuente.
 = Caracteristicas=
 
   * Permite selecionar [http://www.graphviz.org/doc/info/shapes.html la forma] y tamaño del nodo
-  * Los colores no están normalizados, posee su propia tabla de [http://www.graphviz.org/doc/info/colors.html colores]
+  * Utiliza _The X11 color schemeLos_  [http://www.graphviz.org/doc/info/colors.html colores]
   * Tiene un conjunto de [http://www.graphviz.org/doc/info/attrs.html atributos configurables] como el font, el color de y tamaño del font, etc..
   * Es posible controlar, hasta cierto grado el tamaño de los grafos
   
