@@ -10,6 +10,13 @@ Tiene una buena [http://www.graphviz.org/Documentation.php documentación] y una
 
 Funciona para plataformas unix/windows/mac y tiene disponible el código fuente. Tanto ejecutables como fuentes se se pueden descargar desde su página de [http://www.graphviz.org/Download..php downloads]
 
+= Caracteristicas=
+
+*[http://www.graphviz.org/ Graphviz]* tiene como 
+
+[http://barriblog.com/taller/images/graphviz.jpg]
+
+
 = Data Set =
 
 Se han creado un conjunto de relaciones basadas en la *mención*, es decir los nombres de usuarios twitter que aparecen en el texto del tweet. Dado que el tamaño de la red podría ser demasiado grande para la práctica se han seleccionado los nodos *más mencionados* y los nodos *más activos*. De estos dos conjuntos solo hay un elemento que está en ambos y que es *@turkey2010*, el community manager de la [http://www.fiba.com/pages/eng/fe/10/fwcm/p/index.html web del campeonato]
@@ -32,10 +39,17 @@ Se han eliminado los nodos que no tenían ninguna mención.
 == Formatos Salida==
 
 =Prática=
-  # Bajar el fichero DOT: [https://docs.google.com/document/edit?id=12-obAlTglu7Gq_ZtKgOUqFOVdNPIwrgmSLu9afXzSuY&hl=en# turkey2010_top_mentions.dot]
-  # Abrir el programa graphviz
-  # abrir fichero 
+  # Bajar el fichero DOT: [https://docs.google.com/document/edit?id=12-obAlTglu7Gq_ZtKgOUqFOVdNPIwrgmSLu9afXzSuY&hl=en# turkey2010_top_mentions.dot] como texto
+  # Abrir el programa graphviz (GVedit.exe)
+  # abrir fichero turkey2010_top_mentions.dot (en local)
+  # seleccionar settings (Graphviz/settings) desde este formulario se pueden seleccionar el layout, el directorio de salida y el formato de salida. Por defecto toma como directorio de salida el mismo del que se encuentra el fichero de entarda .dot
+  # seleccionar layout dot: y ejecutar. Se verá que el grafo es *muy grande*. Para ajustar tamaño poner los parámetros: *ranksep="0.2 equally" nodesep="0.2 equally*"
+  # seleccionar layout
+  # seleccionar layout
+  # seleccionar layout
+  # seleccionat layout
 
 
+  
 
 
