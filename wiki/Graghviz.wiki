@@ -1,6 +1,0 @@
-#Información para el taller de graphviz.
-
-= Introduction =
-
-Add your content here.
-
