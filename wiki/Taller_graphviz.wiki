@@ -2,5 +2,15 @@
 
 = Introduction =
 
-Add your content here.
+*[http://www.graphviz.org/ Graphviz]* es una aplicación y un conjunto de librerías *open source*  para dibujar gráficos. Está desarrollada por [http://www.graphviz.org/Credits.php investigadores de AT&T] con algunas colaboraciones externas.
+
+Los datos de entrada están en formato [http://en.wikipedia.org/wiki/DOT_language DOT], permite realizar diferentes layouts y obtener la salida en diferentes formatos. Muestra  una [http://www.graphviz.org/Gallery.php galería] de visualizaciones y los datos de entrada necesarios para realizarla.
+
+Tiene una buena [http://www.graphviz.org/Documentation.php documentación] y una interesante [http://www.graphviz.org/doc/FAQ.html FAQ]
+
+Funciona para plataformas unix/windows/mac y tiene disponible el código fuente. Tanto ejecutables como fuentes se se pueden descargar desde su página de [http://www.graphviz.org/Download..php downloads]
+
+
+
+
 
