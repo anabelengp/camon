@@ -22,13 +22,19 @@ Los datos de entrada están en formato DOT, y son acesibles [https://docs.google
 
 Se han generado automáticamente desde los tweets seleccionados del Turkey2010 de la manera más sencilla posible. Se ha evitado aplicar muchos atributos como font, fontsize, etc.. para que tome los valores por defecto.
 
-Se ha tomado un *convenio de color*: Los nodos *rojos* son los más mencionados y los *verdes* los más activos twiteando. 
+Se ha adoptado un *convenio de color*: Los nodos *rojos* son los más mencionados y los *verdes* los más activos twiteando. 
 
 Se han eliminado los nodos que no tenían ninguna mención.
 
 == layouts==
-== Formatos Salida
 
+
+== Formatos Salida==
+
+=Prática=
+  # Bajar el fichero DOT: [https://docs.google.com/document/edit?id=12-obAlTglu7Gq_ZtKgOUqFOVdNPIwrgmSLu9afXzSuY&hl=en# turkey2010_top_mentions.dot]
+  # Abrir el programa graphviz
+  # abrir fichero 
 
 
 
