@@ -35,12 +35,13 @@ Se han eliminado los nodos que no tenían ninguna mención.
 
 == Layouts==
 
-  * *dot* Estructura jerárquica, se dibuja de evitando que los arcos se crucen y pasen por encima de los nodos. No es eficiente en el espacio ocupado. Se puede ajustar el tamaño mínimo poniendo los parámetros  *ranksep="0.2 equally" y nodesep="0.2 equally".
-(ranksep es la distancia en vertical entre nodos y nodesep es la distancia horizontal entre nodos, en pulgadas)
-  * *neato* es un layout "spring model" que busca la mínima energía entre nodos, basado en el algoritmo Kamada-Kawai (no se puede ajustar las distancia entre nodos con los parámetrso ranksep y nodesep)
-  * *fdp* es un layout "spring nodel" que utiliza springs solo en los nodos conectados con un flecha y fuerzas respulsivas con el resto de los nodos. Implementa el heurístico Fruchterman-Reingold (no se puede ajustar las distancia entre nodos con los parámetros ranksep y nodesep).
-  * * Twopi* Dibuja un layout radial disponiendo los nodos concentricos a un nodo central en función de su distancia. En este caso ranksep y nodesep es la distancia radial
-  * *circo* Dispone los nodos de forma circular
+  * *dot* Estructura jerárquica, se dibuja de evitando que los arcos se crucen y pasen por encima de los nodos. No es eficiente en el espacio ocupado. Se puede ajustar el tamaño mínimo poniendo los parametros  _ranksep="0.2 equally" y nodesep="0.2 equally"_.
+(_ranksep_ es la distancia en vertical entre nodos y _nodesep_ es la distancia horizontal entre nodos, en pulgadas)
+  * *neato* es un layout _spring model_ que busca la mínima energía entre nodos, basado en el algoritmo *Kamada-Kawai* (no se puede ajustar las distancia entre nodos con los parámetrso ranksep y nodesep)
+  * *fdp* es un layout _spring nodel_ que utiliza springs solo en los nodos coectados con un flecha y fuerzas respulsivas con el resto de los nodos. Implementa el heurístico *Fruchterman-Reingold* (no se puede ajustar las distancia entre nodos con los parámetrso ranksep y nodesep).
+  * * Twopi* Dibuja un layout radial disponiendo los nodos concentricos a un nodo central en función de su distamcia. En este caso _ranksep_ y _nodesep_ es la distancia radial
+  * *circo* Dispone los nodos de forma circular (no se puede ajustar las distancia entre nodos con los parámetrso ranksep y nodesep).
+
 == Formatos Salida==
 
 =Prática=
@@ -56,3 +57,4 @@ Se han eliminado los nodos que no tenían ninguna mención.
 
 
   
+
