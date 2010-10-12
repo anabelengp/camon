@@ -1,0 +1,11 @@
+#summary One-sentence summary of this page.
+
+= Introducción =
+
+
+
+
+Eliminar wentidades aisladas: Los nodos que no tienen relaciones con otros no son relevantes. Para eliminar las entidades que pudieran estar aisladas y mejorar los resultados del análisis, se ejecutan los comandos 
+ 
+  * Net > Partitions > Degree > All
+  * Operations > Extract from Network > Partition > 1-*
