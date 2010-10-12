@@ -10,6 +10,25 @@ Tiene una buena [http://www.graphviz.org/Documentation.php documentación] y una
 
 Funciona para plataformas unix/windows/mac y tiene disponible el código fuente. Tanto ejecutables como fuentes se se pueden descargar desde su página de [http://www.graphviz.org/Download..php downloads]
 
+= Data Set =
+
+Se han creado un conjunto de relaciones basadas en la *mención*, es decir los nombres de usuarios twitter que aparecen en el texto del tweet. Dado que el tamaño de la red podría ser demasiado grande para la práctica se han seleccionado los nodos *más mencionados* y los nodos *más activos*. De estos dos conjuntos solo hay un elemento que está en ambos y que es *@turkey2010*, el community manager de la [http://www.fiba.com/pages/eng/fe/10/fwcm/p/index.html web del campeonato]
+
+= Visualización=
+
+== Datos de entrada==
+
+Los datos de entrada están en formato DOT, y son acesibles [https://docs.google.com/document/edit?id=12-obAlTglu7Gq_ZtKgOUqFOVdNPIwrgmSLu9afXzSuY&hl=en# aquí]
+
+Se han generado automáticamente desde los tweets seleccionados del Turkey2010 de la manera más sencilla posible. Se ha evitado aplicar muchos atributos como font, fontsize, etc.. para que tome los valores por defecto.
+
+Se ha tomado un *convenio de color*: Los nodos *rojos* son los más mencionados y los *verdes* los más activos twiteando. 
+
+Se han eliminado los nodos que no tenían ninguna mención.
+
+== layouts==
+== Formatos Salida
+
 
 
 
