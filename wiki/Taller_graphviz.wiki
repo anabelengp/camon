@@ -21,7 +21,7 @@ Funciona para plataformas unix/windows/mac y tiene disponible el código fuente.
 
 = Data Set =
 
-Se han creado un conjunto de relaciones basadas en la *mención*, es decir los nombres de usuarios twitter que aparecen en el texto del tweet. Dado que el tamaño de la red podría ser demasiado grande para la práctica se han seleccionado los nodos *más mencionados* y los nodos *más activos*. De estos dos conjuntos solo hay un elemento que está en ambos y que es *@turkey2010*, el community manager de la [http://www.fiba.com/pages/eng/fe/10/fwcm/p/index.html web del campeonato]
+Desde [http://code.google.com/p/camon/wiki/Datset los tweets obtenidos] del pasado mundial de Baloncesto se han creado un conjunto de relaciones basadas en la *mención*, es decir los nombres de usuarios twitter que aparecen en el texto del tweet. Dado que el tamaño de la red podría ser demasiado grande para la práctica se han seleccionado los nodos *más mencionados* y los nodos *más activos*. De estos dos conjuntos solo hay un elemento que está en ambos y que es *@turkey2010*, el community manager de la [http://www.fiba.com/pages/eng/fe/10/fwcm/p/index.html web del campeonato]
 
 = Visualización=
 
