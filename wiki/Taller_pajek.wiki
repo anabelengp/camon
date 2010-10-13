@@ -25,21 +25,68 @@ Desde [http://code.google.com/p/camon/wiki/Datset los tweets obtenidos] del pasa
 
 Los datos de entrada están en formato [http://gephi.org/users/supported-graph-formats/pajek-net-format/ NET], y son acesibles [https://docs.google.com/leaf?id=0B_qG-02OdbLbZDBmYjQ2ODAtOGM0MS00ZGUxLTk2MGQtMDE1ZjFhZTk0ZGE2&hl=en&authkey=CN_i8p0O aquí]
 
-Se han generado automáticamente desde los tweets seleccionados del Turkey2010 de la manera más sencilla posible. Se ha evitado aplicar muchos atributos como font, fontsize, etc.. para que tome los valores por defecto.
+Se han generado automáticamente desde los tweets seleccionados del Turkey2010 de la manera más sencilla posible. Se ha tratado de aplicar los atributos más necesarios para mejorar la visualización de la red.
 
-Se ha adoptado un *convenio de color*: Los nodos *rojos* son los más mencionados y los *verdes* los más activos twiteando. 
+Se ha adoptado un *convenio de color*, tamaño de los nodos, tamaño de las fechas y _timestamp_:
+* Los nodos *rojos* son los más mencionados y los *verdes* los más activos twiteando.
+* El tañamo de los nodos depende del número de enlaces entrantes y salientes. 
+* El tamaño de los arcos depende del número de menciones entre los dos nodos.
+* A cada nodo se le asocia el _timestamp_ de su primera aparición en la red
+* Al conjunto de menciones entre entre cada par de nodos se le asocia el _timestamp_ de su primera aparación.
+* Se han eliminado los nodos que no tenían ninguna mención 
 
-Se han eliminado los nodos que no tenían ninguna mención.
+== Layouts ==
+
+  * *circular* Estructura circular de los nodos con enlaces entre ellos.
+  * *Energy Kamada-Kawai* es un layout _spring model_ que busca la mínima energía entre nodos.
+  * *Energy Fruchterman-Reingold* es un layout _spring nodel_ que utiliza springs solo en los nodos conectados con un flecha y fuerzas respulsivas con el resto de los nodos. 
+
+== Formatos Salida==
+
+No exporta a los clasicos formatos de imágenes como jpg, png y gif, solo al formato bmp.  
+
+ * Exportación en 2D: 
+    * EPS/PS
+    * SGV (las imágenes SVG pueden ser abiertas con el programa [http://inkscape.org/?lang=es InkScape] para mejorar su presentación)
+    * bmp
+ * Exportación en 3D:
+    * 3XD
+    * VRML
+
+=Prática=
+
+== Bajar el fichero *.net y arrancar probrama ==
+  # Bajar el fichero NET: [https://docs.google.com/leaf?id=0B_qG-02OdbLbZDBmYjQ2ODAtOGM0MS00ZGUxLTk2MGQtMDE1ZjFhZTk0ZGE2&hl=en&authkey=CN_i8p0O  turkey2010_top_mentions.net] como texto
+  # Abrir el programa graphviz (pajek.exe)
+  # Leer la red (*File >Network > Read*  > Abrir fichero turkey2010_mentions.net )
+  # Seleccionar opcion de menú *Draw > Draw*
+  # En la ventana de *Draw* seleccionar *Layout >circular>original*  Se verán muchos nodos que no tienen conexión (aunque no estban en el formato)
+
+== Seleccionar solo los nodos que tiene conexión ==
+
+Los nodos que no tienen relaciones con otros no son relevantes. Para eliminar las entidades que pudieran estar aisladas y mejorar los resultados del análisis, se ejecutan los comandos :
+    * *Net > Partitions > Degree > All*
+    * *Operations > Extract from Network > Partition > 1-* *
+    * Seleccionar opcion de menú *Draw > Draw*
+    * En la ventana de *Draw* seleccionar *Layout >circular>original*  Se verán solo los nodos que tiene  conexión.
 
 
-Eliminar wentidades aisladas: Los nodos que no tienen relaciones con otros no son relevantes. Para eliminar las entidades que pudieran estar aisladas y mejorar los resultados del análisis, se ejecutan los comandos 
- 
-  * Net > Partitions > Degree > All
-  * Operations > Extract from Network > Partition > 1-*
+== Visualizar los distintos layouts ==
+  # opciones de visualización:
+    * Seleccionar * Options > Size > Of Vertices Defined in Input File
+    * Seleccionar * Options > Color > Vertices > As Defined in Input File
 
-Documenación de Pajek
+== Visualizar los distintos layouts ==
 
+En la ventana de Draw, seleccionar los distintos layouts y observar las diferencias.
 
+== Visualizar en el tiempo ==
 
-The SVG picture can be opened in the free drawing program InkScape.
-Here we can make some additional enhancements of the picture.
+Vover a la ventama princial y ejecutar el comando
+
+  * Net > Tranasform > Generate in Time > all 
+    * Primer timestamp: 1
+    * Ultimo timestamp: 17
+    * pasos: 1  
+  * seleccionar la red de *time 1*  (desplegable de networks)
+  * Ir a la ventana de Draw y obserbar como la red va creciendo con el tiempo con la opcion de *next*
