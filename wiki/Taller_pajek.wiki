@@ -6,7 +6,7 @@
 
 Tiene una [http://vlado.fmf.uni-lj.si/pub/networks/pajek/doc/pajekman.pdf documentación]  extensa y un libro titulado [http://www.amazon.com/gp/product/0521602629/104-4818949-5145535?v=glance&n=283155 Exploratory Social Network Analysis with Pajek (Structural Analysis in the Social Sciences]
 
-Funciona sobre plataformas Windows y es muy usado dentro del entorno de análisis de redes sociales. Se puede sescargar el en su página de [http://pajek.imfm.si/doku.php?id=downloa d downloads]
+Funciona sobre plataformas Windows y es muy usado dentro del entorno de análisis de redes sociales. Se puede sescargar el en su página de [http://pajek.imfm.si/doku.php?id=download downloads]
 
 =Caracteísticas=
     * Permite selecionar la forma y tamaño del nodo
