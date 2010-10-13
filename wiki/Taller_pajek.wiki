@@ -2,10 +2,44 @@
 
 = Introducción =
 
+*[http://pajek.imfm.si/doku.php Pajek]*  (_Pajek_ significa araña en esloveno) es un programa para *visualizar* y *analizar*  grandes redes. Fue desarrollafo por [http://vlado.fmf.uni-lj.si/vlado/vlado.htm Vladimir Batagelj] (matématico) y [http://mrvar.fdv.uni-lj.si/ Andrej Mrvar] (sociólogo).  Se empezó a desarrollar en noviembre 1996 y se implementó en Delphi (Pascal). 
 
+Tiene una [http://vlado.fmf.uni-lj.si/pub/networks/pajek/doc/pajekman.pdf documentación]  extensa y un libro titulado [http://www.amazon.com/gp/product/0521602629/104-4818949-5145535?v=glance&n=283155 Exploratory Social Network Analysis with Pajek (Structural Analysis in the Social Sciences]
+
+Funciona sobre plataformas Windows y es muy usado dentro del entorno de análisis de redes sociales. Se puede sescargar el en su página de [http://pajek.imfm.si/doku.php?id=downloa ddownloads]
+
+=Caracteísticas=
+    * Permite selecionar la forma y tamaño del nodo
+    * El color se utiliza en [http://vlado.fmf.uni-lj.si/pub/networks/pajek/doc/epsdef.htm función del formato de exportación del gráfico]
+    * Tiene un conjunto de atributos configurables como el font, el color de y tamaño del font, etc.. La información se encuentra en el punto _5.3 Exporting pictures to EPS/SVG – defining parameters in input file (page 72)_.
+    * Es posible generar grafos en el tiempo.
+
+=Data Set=
+
+Se han creado un conjunto de relaciones basadas en la mención, es decir los nombres de usuarios twitter que aparecen en el texto del tweet. Dado que el tamaño de la red podría ser demasiado grande para la práctica se han seleccionado los nodos más mencionados y los nodos más activos. De estos dos conjuntos solo hay un elemento que está en ambos y que es @turkey2010, el community manager de la  [http://www.fiba.com/pages/eng/fe/10/fwcm/p/index.html web del campeonato]
+
+
+= Visualización=
+
+== Datos de entrada==
+
+Los datos de entrada están en formato [http://gephi.org/users/supported-graph-formats/pajek-net-format/NET], y son acesibles [https://docs.google.com/leaf?id=0B_qG-02OdbLbZDBmYjQ2ODAtOGM0MS00ZGUxLTk2MGQtMDE1ZjFhZTk0ZGE2&hl=en&authkey=CN_i8p0O aquí]
+
+Se han generado automáticamente desde los tweets seleccionados del Turkey2010 de la manera más sencilla posible. Se ha evitado aplicar muchos atributos como font, fontsize, etc.. para que tome los valores por defecto.
+
+Se ha adoptado un *convenio de color*: Los nodos *rojos* son los más mencionados y los *verdes* los más activos twiteando. 
+
+Se han eliminado los nodos que no tenían ninguna mención.
 
 
 Eliminar wentidades aisladas: Los nodos que no tienen relaciones con otros no son relevantes. Para eliminar las entidades que pudieran estar aisladas y mejorar los resultados del análisis, se ejecutan los comandos 
  
   * Net > Partitions > Degree > All
   * Operations > Extract from Network > Partition > 1-*
+
+Documenación de Pajek
+
+
+
+The SVG picture can be opened in the free drawing program InkScape.
+Here we can make some additional enhancements of the picture.
