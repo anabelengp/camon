@@ -23,7 +23,7 @@ Desde [http://code.google.com/p/camon/wiki/Datset los Tweets obtenidos] del pasa
 
 == Datos de entrada==
 
-Los datos de entrada están en formato [http://gephi.org/users/supported-graph-formats/pajek-net-format/ NET], y son accesibles [https://docs.google.com/leaf?id=0B_qG-02OdbLbZDBmYjQ2ODAtOGM0MS00ZGUxLTk2MGQtMDE1ZjFhZTk0ZGE2&hl=en&authkey=CN_i8p0O aquí]
+Los datos de entrada están en formato [https://docs.google.com/leaf?id=0B_qG-02OdbLbZDBmYjQ2ODAtOGM0MS00ZGUxLTk2MGQtMDE1ZjFhZTk0ZGE2&hl=en&authkey=CN_i8p0O aquí]
 
 Se han generado automáticamente desde los tweets seleccionados del Turkey2010 de la manera más sencilla posible. Se ha tratado de aplicar los atributos más necesarios para mejorar la visualización de la red.
 
