@@ -1,0 +1,124 @@
+<!--
+  copyright (c) 2009 Google inc.
+
+  You are free to copy and use this sample.
+  License can be found here: http://code.google.com/apis/ajaxsearch/faq/#license
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Google Visualization API Sample</title>
+  <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+    google.load('visualization', '1', {packages: ['motionchart']});
+
+    
+    function initialize() {
+          // Query our data source URL.
+          var query = new google.visualization.Query(' https://spreadsheets.google.com/tq?key=0AvqG-02OdbLbdE9XRmE5UnFZLU5qQ3M4MXp1aEVFNXc&gid=5&headers=1');
+       
+          // Send the query with a callback function.
+          query.send(handleQueryResponse);
+        }
+    
+        function handleQueryResponse(response) {
+          // Called when the query response is returned.
+          if (response.isError()) {
+            alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+            return;
+          }
+          //Take the data from the response
+          var data1 = response.getDataTable();
+          //The source data has the following columns:
+          //Team | Date | Number of mentions
+          //But we want to add more interesting information like the
+          //following data:
+          //Team | Match Date | Points | Winner
+          //So let's JOIN our data!
+          
+          //Create the new table
+          var data2 = new google.visualization.DataTable();
+          /* Number of rows */
+          /*Columns definition */
+          data2.addColumn('string', 'Country');
+          data2.addColumn('date', 'Match Date');
+          data2.addColumn('number', 'Points');
+          data2.addColumn('string', 'Win');
+          /*Data*/
+          data2.addRows([
+              [ '#ltu', new Date (2010,7,28), 92, 'yes'] ,
+              [ '#ltu', new Date (2010,7,29), 70, 'yes'] ,
+              [ '#ltu', new Date (2010,7,31), 76, 'yes'] ,
+              [ '#ltu', new Date (2010,8,1),  69, 'yes'] ,
+              [ '#ltu', new Date (2010,8,2),  84, 'yes'] ,
+              [ '#ltu', new Date (2010,8,7),  78, 'yes'] ,
+              [ '#ltu', new Date (2010,8,9),  85, 'no' ] ,
+              [ '#ltu', new Date (2010,8,11), 74, 'no' ] ,
+              [ '#ltu', new Date (2010,8,12), 99, 'yes'] ,
+              
+              [ '#srb', new Date (2010,7,28), 94, 'yes'] ,
+              [ '#srb', new Date (2010,7,29), 81, 'no' ] ,
+              [ '#srb', new Date (2010,7,30), 112,'yes'] ,
+              [ '#srb', new Date (2010,8,1),  94, 'yes'] ,
+              [ '#srb', new Date (2010,8,2),  84, 'yes'] ,
+              [ '#srb', new Date (2010,8,4),  73, 'yes'] ,
+              [ '#srb', new Date (2010,8,8),  92, 'yes'] ,
+              [ '#srb', new Date (2010,8,11), 82, 'no' ] ,
+              [ '#srb', new Date (2010,8,12), 88, 'no' ] ,
+              
+              [ '#tur', new Date (2010,7,28), 86, 'yes'] ,
+              [ '#tur', new Date (2010,7,29), 65, 'yes'] ,
+              [ '#tur', new Date (2010,7,31), 76, 'yes'] ,
+              [ '#tur', new Date (2010,8,1),  79, 'yes'] ,
+              [ '#tur', new Date (2010,8,2),  87, 'yes'] ,
+              [ '#tur', new Date (2010,8,5),  95, 'yes'] ,
+              [ '#tur', new Date (2010,8,8),  95, 'yes'] ,
+              [ '#tur', new Date (2010,8,11), 83, 'yes'] ,
+              [ '#tur', new Date (2010,8,12), 64, 'no' ] ,
+              
+              [ '#usa', new Date (2010,7,28), 106,'yes'] ,
+              [ '#usa', new Date (2010,7,29), 99, 'yes'] ,
+              [ '#usa', new Date (2010,7,30), 70, 'yes'] ,
+              [ '#usa', new Date (2010,8,1),  88, 'yes'] ,
+              [ '#usa', new Date (2010,8,2),  92, 'yes'] ,
+              [ '#usa', new Date (2010,8,6),  121,'yes'] ,
+              [ '#usa', new Date (2010,8,9),  89, 'yes'] ,
+              [ '#usa', new Date (2010,8,11), 89, 'yes'] ,
+              [ '#usa', new Date (2010,8,12), 81, 'yes'] ,
+              
+              [ '#esp', new Date (2010,7,28), 66, 'no' ] ,
+              [ '#esp', new Date (2010,7,29), 101,'yes'] ,
+              [ '#esp', new Date (2010,7,31), 73, 'no' ] ,
+              [ '#esp', new Date (2010,8,1),  91, 'yes'] ,
+              [ '#esp', new Date (2010,8,2),  89, 'yes'] ,
+              [ '#esp', new Date (2010,8,4),  80, 'yes'] ,
+              [ '#esp', new Date (2010,8,8),  89, 'no' ] ,
+              [ '#esp', new Date (2010,8,10), 97, 'yes'] ,
+              [ '#esp', new Date (2010,8,12), 81, 'no']
+          ]);      
+          
+          var dataTable = google.visualization.data.join(data1, data2, 'inner', [[0,0],[1,1]],[2],[2,3]);
+          drawVisualization(dataTable);
+    
+    }
+    
+    
+    
+    function drawVisualization(data) {
+    
+      var motionchart = new google.visualization.MotionChart(
+          document.getElementById('visualization'));
+      motionchart.draw(data, {'width': 800, 'height': 400});
+    }
+    
+
+    google.setOnLoadCallback(initialize);
+  </script>
+</head>
+<body style="font-family: Arial;border: 0 none;">
+<div id="visualization" style="width: 800px; height: 400px;"></div>
+</body>
+</html>
+
