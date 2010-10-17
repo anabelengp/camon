@@ -50,39 +50,53 @@ body {
     <script type="text/javascript+protovis">
 
 	var players = {ANG:{'Lutonda, M.':21, 'Almeida, C.':7, 'Mingas, E.':3, 'Gomes, J.':7, 'Morais, C.':1, 'Bonifacio, D.':0, 'Cipriano, O.':16, 'Jeronimo, V.':0, 'Paulo, L.':16, 'Ambrosio, F.':18, 'Fortes, R.':1, 'Mbunga, H.':3}, ARG:{'Oberto, F.':23, 'Gutierrez, L.':16, 'Scola, L.':658, 'Jasen, H.':12, 'Kammerichs, Federico':1, 'Prigioni, P.':24, 'Delfino, C.':73, 'Gonzalez, R.':22, 'Quinteros, P.':10, 'Gutierrez, J.':16, 'Cequeira, L.':15}, AUS:{'Nielsen, M.':5, 'Andersen, D.':20, 'Maric, A.':5, 'Markovic, S.':12, 'Martin, D.':96, 'Newley, B.':1, 'Gibson, A.':22, 'Baynes, A.':2, 'Ingles, J.':6, 'Worthington, M.':2, 'Barlow, D.':0, 'Mills, P.':22}, BRA:{'Machado, M.':28, 'Giovannoni, G.':4, 'Splitter, T.':83, 'Varejao, A.':20, 'Garcia, A.':34, 'Barbosa, L.':52, 'Vinicius, M.':21, 'Dos Santos, N.':19, 'Becker, M.':4, 'Huertas, M.':156, 'Batista, J.':43, 'Neto, R.':2}, CAN:{'Brown, D.':289, 'Kendall, L.':25, 'Doornekamp, A.':6, 'Shepherd, J.':10, 'Rautins, A.':41, 'Anderson, J.':79, 'Bucknor, J.':1, 'Anthony, J.':318, 'Sacre, R.':3, 'Bell, R.':227, 'Famutimi, O.':3, 'Olynyk, K.':8}, CHN:{'Jin, L.':25, 'Wang, Z.':28, 'Liu, W.':7, 'Yi, J.':1, 'Sun, Y.':0, 'Wang, S.':28, 'Su, W.':0, 'Ding, J.':29, 'Zhou, P.':7, 'Zhang, Z.':0, 'Guo, A.':7, 'Yu, S.':7}, CIV:{'Amagou, P.':0, 'Konate, K.':7, 'Lamizana, M.':9, 'Tape, E.':13, 'Edi, G.':45, 'Assie, B.':2, 'Kone, M.':8, 'Diabate, M.':3, 'Abouo, C.':23, 'N\'Diaye, I.':0, 'Soumahoro, I.':0, 'Kale, J.':14}, CRO:{'Popovic, M.':14, 'Loncar, K.':4, 'Kus, D.':86, 'Ukic, R.':7, 'Planinic, Z.':2, 'Tomas, M.':13, 'Andric, L.':2, 'Banic, M.':3, 'Zoric, L.':0, 'Tomic, A.':3, 'Stipcevic, R.':0, 'Bogdanovic, B.':7}, ESP:{'Garbajosa, J.':37, 'Lopez, R.':36, 'Navarro, J.':182, 'Reyes, F.':40, 'Mumbru, A.':3, 'Vazquez, F.':21, 'Fernandez, R.':43, 'Gasol, M.':156, 'San Emeterio, F.':8, 'Llull, S.':16, 'Claver, V.':36, 'Rubio, R.':101}, FRA:{'Pietrus, F.':12, 'Diaw, B.':30, 'Bokolo, Y.':2, 'Traore, A.':3, 'Gelabale, M.':49, 'Mahinmi, I.':3, 'Batum, N.':69, 'Jackson, E.':113, 'Koffi, A.':6, 'Causeur, F.':1, 'De Colo, N.':144, 'Albicy, A.':10}, GER:{'Hamann, S.':20, 'Jagla, J.':34, 'Greene, D.':41, 'McNaughton, C.':7, 'Schaffartzik, H.':5, 'Ohlbrecht, T.':6, 'Staiger, L.':5, 'G\xB8nther, P.':0, 'Benzing, R.':8, 'Harris, E.':90, 'Schwethelm, P.':0, 'Plei?, T.':7, 'Fotsis, A.':6, 'Tsartsaris, K.':2, 'Zisis, N.':22, 'Diamantidis, D.':30, 'Spanoulis, V.':19, 'Schortsanitis, S.':19, 'Printezis, G.':0, 'Vougioukas, I.':0, 'Kaimakoglou, K.':1, 'Perperoglou, S.':0, 'Bourousis, I.':23}, IRI:{'Sahakian, O.':0, 'Davoudi, A.':0, 'Haddadi, H.':10, 'Davarpanah, S.':0, 'Kardoust, A.':0, 'Kamrani, M.':4, 'Zandi, I.':0, 'Nabipour, M.':0, 'Davari, J.':2, 'Kazemi, A.':14, 'Hassanzadeh Saberi A., M.':0, 'Veisi, S.':2}, JOR:{'Al-Khas, Z.':0, 'Wright, R.':33, 'Alnajjar, F.':0, 'Daghles, O.':0, 'Abbaas, Z.':5, 'Alawadi, M.':0, 'Soobzokov, E.':0, 'Al-Sous, W.':0, 'Adais, A.':0, 'Hussein, M.':5, 'Hadrab, M.':0, 'Zaghab, A.':0}, LIB:{'Fahed, R.':2, 'El Khatib, F.':52, 'Mahmoud, A.':7, 'Reda, Ghaled':3, 'Freije, M.':2, 'Vroman, J.':1, 'Abdelnour, J.':0, 'Fakhreddine, A.':0, 'Akl, R.':0, 'Rustom, E.':2, 'Kanaan, A.':0, 'Stephan, E.':15}, LTU:{'Javtokas, R.':11, 'Jasaitis, S.':15, 'Kleiza, L.':276, 'Maciulis, J.':5, 'Jankunas, P.':2, 'Delininkaitis, T.':1, 'Klimavicius, T.':0, 'Gecevicius, M.':4, 'Seibutis, Renaldas':1, 'Andriuskevicius, M.':3, 'Kalnietis, M.':12, 'Pocius, M.':23}, NZL:{'Jones, P.':211, 'Cameron, P.':55, 'Penney, K.':28, 'Frank, C.':155, 'Tait, L.':3, 'Bradshaw, C.':1, 'Abercrombie, T.':22, 'Vukona, M.':6, 'Kench, J.':0, 'Anthony, B.':318, 'Fitchett, M.':1, 'Pledger, A.':0}, PUR:{'Santiago, D.':7, 'Arroyo, C.':6, 'Ramos, P.':79, 'Huertas, D.':156, 'Barea, J.':16, 'Vassallo, A.':34, 'Sanchez, R.':27, 'Rivera, F.':5, 'Diaz, G.':11, 'Lee, C.':285, 'Peavy, N.':2, 'Balkman, R.':11}, RUS:{'Khryapa, V.':0, 'Bykov, S.':2, 'Monya, S.':10, 'Voronov, E.':0, 'Ponkrashov, A.':3, 'Zhukanenko, A.':0, 'Khvostov, D.':5, 'Kolesnikov, E.':0, 'Fridzon, V.':0, 'Mozgov, T.':42, 'Vorontsevich, A.':1, 'Kaun, S.':17}, SLO:{'Jagodnik, G.':0, 'Nachbar, B.':102, 'Lakovic, J.':20, 'Udrih, S.':1, 'Becirovic, S.':12, 'Brezec, P.':10, 'Slokar, U.':1, 'Zupan, M.':22, 'Rizvic, H.':0, 'Vidmar, G.':12, 'Dragic, G.':20, 'Klobucar, J.':0}, SRB:{'Krstic, N.':42, 'Perovic, K.':7, 'Rasic, A.':21, 'Tepic, M.':1, 'Teodosic, Milos':263, 'Velickovic, N.':14, 'KESELJ, M.':0, 'Markovic, S.':12, 'Paunic, I.':0, 'Macvan, M.':0, 'Savanovic, D.':12, 'Bjelica, N.':7}, TUN:{'Hadidane, M.':0, 'Laghnej, M.':0, 'Slimane, R.':0, 'Dhifallah, N.':2, 'Maoua, A.':0, 'Kechrid, M.':0, 'Ghyaza, M.':0, 'Knioua, N.':0, 'Rzig, A.':0, 'Braa, Hamdi':5, 'Mejri, S.':2, 'Ben Romdhane, M.':0}, TUR:{'Tun\xE7eri, K.':41, 'T\xDCRKOGLU, H.':13, 'Onan, \xF7.':37, 'Arslan, E.':34, 'G\u02C6nl\xB8m, K.':17, 'Ermis, B.':0, 'G\xFCler, S.':22, 'Akyol, C.':72, 'Savas, O.':19, 'ILYASOVA, E.':7, 'Erden, S.':60, Asik:25}, USA:{'Odom, L.':435, 'Gay, R.':153, 'CURRY, S.':118, 'Rose, D.':290, 'Billups, C.':129, 'Chandler, T.':40, 'Durant, K.':2241, 'Gordon, E.':124, 'Granger, D.':46, 'Iguoala, A.':0, 'Love, K.':84, 'Westbrook, R.':78}}; 
+
+	/* Initial RegExp used to cfilter players */
+	var re = "";
+	/* Set of colors */
+	var color = pv.Colors.category20().by(function(d) d.parentNode.nodeName);
+	/*
+	Get all the nodes. Steps:
+		 1. Convert players (JSON Object) into a DOM format. 
+		 3. Get all the nodes from the root one
+	*/
+	var nodes = pv.dom(players).nodes();
+
+	/* Initial Panel */
+	var vis = new pv.Panel()
+	    .width(800)
+	    .height(500);
 	
-	/** Computes the full class name of a given node. */
+	/* Add the TreeMap Layout to the panel and set its nodes */
+	var treemap = vis.add(pv.Layout.Treemap)
+	    .nodes(nodes)
+
+	/* Add the exported mark "leaf" to render only leaf nodes */
+	treemap.leaf.add(pv.Bar)
+	    .fillStyle(function(d) color(d).alpha(title(d).match(re) ? 1 : .2)) //Change the fill color according to the "re" variable (current query)
+	    .strokeStyle("#fff")
+	    .lineWidth(1)
+	    .antialias(false)
+		.title(function(d) title(d));	//Show the title tooltip according to the previous title function
+
+	/* Add the exported mark "label" to render the node labels */
+	treemap.label.add(pv.Label)
+		.text(function(d) d.nodeName )
+		.visible(function(d) d.firstChild && d.parentNode) //Render only the Team nodes (not the players)
+		.textAlign("center")
+		.textStyle("#000000");
+
+	/* Launch the visualization */
+	vis.render();
+	/* count and render the number of players */
+	count();
+	
+	/* Function to create the title of a given node. This title is composed by the country and the player names */
 	function title(d) {
 	  return d.parentNode ? (d.nodeName + " [" +d.parentNode.nodeName+"]") : d.nodeName;
 	}
 
-	var re = "",
-	    color = pv.Colors.category20().by(function(d) d.parentNode.nodeName)
-	    nodes = pv.dom(players).root("players").nodes();
-
-	var vis = new pv.Panel()
-	    .width(800)
-	    .height(500);
-
-	var treemap = vis.add(pv.Layout.Treemap)
-	    .nodes(nodes)
-
-	treemap.leaf.add(pv.Bar)
-	    .fillStyle(function(d) color(d).alpha(title(d).match(re) ? 1 : .2))
-	    .strokeStyle("#fff")
-	    .lineWidth(1)
-	    .antialias(false)
-		.title(function(d) title(d));
-
-	treemap.label.add(pv.Label)
-		.text(function(d) d.nodeName )
-		.visible(function(d) d.firstChild && d.parentNode)
-		.textAlign("center")
-		.textStyle("#000000");
-
-	vis.render();
-
-	/** Counts the number of matching classes, updating the title element. */
+	/** Function to count the number of matching players, updating the title element. */
 	function count() {
 	  var players = 0, menc = 0, total = 0;
 	  for (var i = 0; i < nodes.length; i++) {
@@ -94,14 +108,15 @@ body {
 	      menc += n.nodeValue;
 	    }
 	  }
+	  // Update the title element with the number of players and the number and percentage of mentions
 	  var percent = menc / total * 100;
 	  document.getElementById("title").innerHTML
-	      = players + " jugadores; "
-	      + menc + " menciones ("
+	      = players + " players; "
+	      + menc + " mentions ("
 	      + percent.toFixed(percent < 10) + "%).";
 	}
 
-	/** Updates the visualization and count when a new query is entered. */
+	/* Function to update the visualization and count when a new query is entered. */
 	function update(query) {
 	  if (query != re) {
 	    re = new RegExp(query, "i");
@@ -109,8 +124,6 @@ body {
 	    vis.render();
 	  }
 	}
-
-	count();
 
     </script>
     <div id="footer">
