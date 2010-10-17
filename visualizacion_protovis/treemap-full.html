@@ -66,7 +66,6 @@ body {
 
 	var treemap = vis.add(pv.Layout.Treemap)
 	    .nodes(nodes)
-	    .round(true);
 
 	treemap.leaf.add(pv.Bar)
 	    .fillStyle(function(d) color(d).alpha(title(d).match(re) ? 1 : .2))
