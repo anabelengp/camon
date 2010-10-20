@@ -16,12 +16,12 @@ Funciona sobre Java y por tanto es multiplataforma
     * Tiene detrás una comunidad
 
 =Funcionalidades=
-    * *Interactividad*: Permite interactuar con el grafo, creando grupos de nodos, comprimiéndolos y expandrendolos, ver la conectividad de cada nodo de forma visual.
+    * *Interactividad*: Permite interactuar con el grafo, creando grupos de nodos, comprimiéndolos y expandiéndolos, ver la conectividad de cada nodo de forma visual.
     * *layout* :Tiene algoritmos de layout de force based y Multi level
     * *Color*: El color del los nodos se puede aplicar por paticiones o por ranking
     * *Tamaño nodos/enlaces*: El tamaño de los nodos y los enlaces se puede representar según su importancia
     * Tiene un conjunto de atributos configurables como el font, el color de y tamaño del font, etc.. 
-    * Es posible generar grafos dinámicos en dunción del tiempos del enlace (requiere formato GEXF).
+    * Es posible generar grafos dinámicos en función del tiempos del enlace (requiere formato GEXF).
 
 =Data Set=
 
@@ -38,8 +38,8 @@ Los datos de entrada están en formato CSV, [http://barriblog.com/taller/redes/t
 
 == Layouts ==
 
-  * *Base forced* Con fuerzas ade atracción y resulsión que se pueden ajustar
-  ** multilevel* 
+  * *Base forced* Con fuerzas de atracción y repulsión que se pueden ajustar 
+  * *Multilevel* 
  
 
 
@@ -56,19 +56,19 @@ Los datos de entrada están en formato CSV, [http://barriblog.com/taller/redes/t
 
    # bajar los ficheros en formato CSV:  [http://barriblog.com/taller/redes/turkey2010_mentions_most_nodes.csv los nodos] y [http://barriblog.com/taller/redes/turkey2010_mentions_most_arcs.csv los enlaces]
   # Abrir el programa gephi
-  # Abrir un nuevo proyecto file > New project (esquina inferior derecha pondra workspace  0 (puede haber más de un workspace)
+  # Abrir un nuevo proyecto File > New project (esquina inferior derecha pondrá workspace  0 (puede haber más de un workspace)
   # Abrir la ventana de la tabla de datos para importar los CSVs Window > Data table
-  # Iportar los nodos:  Pulsar en la ventana de Data Table Nodes  e import CSV (los nombres de las dos primeras columnas deben ser *Id* *Label* para que lo entienda)
-  # Importar los enlaces: Pulsar en la ventana de Data Table Edges e import CSV (los nombres de las tres primeras columnas deben Source,Target, Weight para que lo entienda)
-  # Abrir la ventana del grafo: window > graph
-  # Abrir la ventana de layout window > Layout, elegir Yfanhu's multilevel (q1ue tarda menos)
-  # Abrir la ventana de Ranking window > Ranking para darle color y tamaños a nodos y enlaces
+  # Importar los nodos:  Pulsar en la ventana de Data Table Nodes  e import CSV (los nombres de las dos primeras columnas deben ser *Id* *Label* para que lo entienda)
+  # Importar los enlaces: Pulsar en la ventana de Data Table Edges e import CSV (los nombres de las tres primeras columnas deben *Source*,*Target*, *Weight* para que lo entienda)
+  # Abrir la ventana del grafo: Window > graph
+  # Abrir la ventana de layout Window > Layout, elegir Yfanhu's multilevel (que tarda menos)
+  # Abrir la ventana de Ranking Window > Ranking para darle color y tamaños a nodos y enlaces
   # Abrir las ventanas de previsualización window > Preview y window > Preview settings
   # Mirar cómo queda
-  # Abir la ventana de window >  partition  para darle color por grupos
+  # Abrir la ventana de Window >  Partition  para darle color por grupos
   # previsualizar
-  # Abir la ventana de filtros window > filter >  : Filtrar por número de enlaces (Library >topology > Degree Range)  y por grupos (Attributes > Partition > Grupos)
-  # Mirar las estadísticas windows > statistics
+  # Abrir la ventana de filtros Window > Filter >  : Filtrar por número de enlaces (Library >Topology > Degree Range)  y por grupos (Attributes > Partition > Grupos)
+  # Mirar las estadísticas Windows > Statistics
 
 
 
@@ -78,4 +78,4 @@ Los datos de entrada están en formato CSV, [http://barriblog.com/taller/redes/t
 
 
 == Guardar el trabajo realizado ==
-   * Salvar el proyecto File > Save*
+   * Salvar el proyecto File > Save
