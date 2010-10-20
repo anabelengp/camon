@@ -99,7 +99,7 @@
               [ '#esp', new Date (2010,8,12), 81, 'no']
           ]);      
           
-          var dataTable = google.visualization.data.join(data1, data2, 'inner', [[0,0],[1,1]],[2],[2,3]);
+          var dataTable = google.visualization.data.join(data1, data2, 'left', [[0,0],[1,1]],[2],[2,3]);
           drawVisualization(dataTable);
     
     }
