@@ -26,14 +26,14 @@ var vis = new pv.Panel()
     .width(w)
     .height(h);
 
-vis.add(pv.Layout.Stack)
+vis.add(pv.Layout.Stack)		//Stack layout. Use of implicit replication (layers are replicated in an enclosing panel)
     .layers(data)
-	//.order("inside-out")
-    .offset("wiggle")
+    .offset("wiggle")			// Algorithm that defines the lowest y-position of the bottom layer
+    							// wiggle => streamgraph
     .x(x.by(pv.index))
     .y(y)
-  .layer.add(pv.Area)
-    .fillStyle(pv.ramp("#aad", "#556").by(Math.random))
+  .layer.add(pv.Area)			//Add the exported mark "layer" to render the layer
+    .fillStyle(pv.ramp("#aad", "#556").by(Math.random))		//Blue palette
     .strokeStyle(function() this.fillStyle().alpha(.5));
 
 vis.render();

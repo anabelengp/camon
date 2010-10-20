@@ -43,10 +43,11 @@
           //prepare the data to represent a hierarchy:
           // hierarchy 1: League - Team - Player --> [11, 10, 2], Size: number of mentions --> 4, Color: height --> 7
           // hierarchy 2: Country - Player --> [0, 2], Size: number of mentions --> 4, Color: age--> 6
-          //hierarchyData = transformToHierarchy(view, [11,10,2], 4, 7);
-          hierarchyData = transformToHierarchy(view, [0,2], 4, 6);
+          hierarchyData1 = transformToHierarchy(view, [11,10,2], 4, 7);
+          hierarchyData2 = transformToHierarchy(view, [0,2], 4, 6);
                   
-          drawVisualization(hierarchyData);
+          drawVisualization(hierarchyData1);
+          drawVisualization(hierarchyData2);
     
         }
           
