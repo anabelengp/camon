@@ -54,7 +54,7 @@ Los datos de entrada están en formato CSV, [http://barriblog.com/taller/redes/t
 
 == Bajar los ficheros entrada y abrir programa ==
 
-   # bajar los ficheros en formato CSV:  [http://barriblog.com/taller/redes/turkey2010_mentions_most_nodes.csv los nodos] y [http://barriblog.com/taller/redes/turkey2010_mentions_most_arcs.csv los enlaces]
+  # Bajar los ficheros en formato CSV:  [http://barriblog.com/taller/redes/turkey2010_mentions_most_nodes.csv los nodos] y [http://barriblog.com/taller/redes/turkey2010_mentions_most_arcs.csv los enlaces]
   # Abrir el programa gephi
   # Abrir un nuevo proyecto File > New project (esquina inferior derecha pondrá workspace  0 (puede haber más de un workspace)
   # Abrir la ventana de la tabla de datos para importar los CSVs Window > Data table
