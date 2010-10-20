@@ -9,7 +9,7 @@ Funciona sobre Java y por tanto es multiplataforma
 
 =Características=
     * Interfaz intuitiva
-    * Admite  [http://gephi.org/users/supported-graph-formats/  Múltiples formatos de entrada], el suyo propio GEXF, los hererdados NET y DOT , SVG y otros más
+    * Admite  [http://gephi.org/users/supported-graph-formats/  Múltiples formatos de entrada], el suyo propio GEXF, los hererdados NET y DOT , CSV y otros más
     * Customizable por plugins
     * [http://gephi.org/users/ Muy buena documentación]
     * En evolución constante, actualmente en la versión 0.7
@@ -45,8 +45,8 @@ Los datos de entrada están en formato CSV, [http://barriblog.com/taller/redes/t
 
 
 == Formatos Salida==
- *SGV 
- *PDF  
+ * SGV 
+ * PDF  
 
 
 
