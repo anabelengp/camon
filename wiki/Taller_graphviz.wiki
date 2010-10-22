@@ -61,7 +61,9 @@ http://www.barriblog.com/taller/redes/turkey2010_mentions_fdp.jpg
   # Seleccionar layout *twopi* Para ajustar tamaño poner los parámetros: *ranksep="1.0 equally" nodesep="1.0 equally*" debe quedar así: 
 http://www.barriblog.com/taller/redes/turkey2010_mentions_twopi.jpg
 
-  # Seleccionat layout *circo* el layaout no es muy adeciado para esta red y no se puede ajustar la distancia entre os nodos:
+  # Seleccionat layout *circo* el layaout no es muy adeciado para esta red y no se puede ajustar la distancia entre os nodos: 
+
+*Hacer scroll hacia abajo que la imagen que sale es enorme*
 http://www.barriblog.com/taller/redes/turkey2010_mentions_circo.jpg
 
 
