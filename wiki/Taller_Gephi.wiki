@@ -32,7 +32,15 @@ Desde [http://code.google.com/p/camon/wiki/Datset los Tweets obtenidos] del pasa
 
 == Datos de entrada==
 
+En el taller los datos de entrada estaban en formato CSV 
 Los datos de entrada están en formato CSV, [http://barriblog.com/taller/redes/turkey2010_mentions_most_nodes.csv los nodos] y [http://barriblog.com/taller/redes/turkey2010_mentions_most_arcs.csv los enlaces]
+Y no nos funcionó bien las particiones. Consultado el foro de Gephi veo que los  CSV no
+[http://forum.gephi.org/viewtopic.php?f=29&t=577 sirven cuando se quiere importar las propieddaes del nodo]
+Para dejar la práctica funcionando al 100% los datos de entrada estarán en formato GEXF
+
+
+
+
 
 
 
@@ -45,7 +53,7 @@ Los datos de entrada están en formato CSV, [http://barriblog.com/taller/redes/t
 
 
 == Formatos Salida==
- * SGV 
+ * SVG 
  * PDF  
 
 
@@ -60,12 +68,21 @@ Los datos de entrada están en formato CSV, [http://barriblog.com/taller/redes/t
   # Abrir la ventana de la tabla de datos para importar los CSVs Window > Data table
   # Importar los nodos:  Pulsar en la ventana de Data Table Nodes  e import CSV (los nombres de las dos primeras columnas deben ser *Id* *Label* para que lo entienda)
   # Importar los enlaces: Pulsar en la ventana de Data Table Edges e import CSV (los nombres de las tres primeras columnas deben *Source*,*Target*, *Weight* para que lo entienda)
-  # Abrir la ventana del grafo: Window > graph
-  # Abrir la ventana de layout Window > Layout, elegir Yfanhu's multilevel (que tarda menos)
-  # Abrir la ventana de Ranking Window > Ranking para darle color y tamaños a nodos y enlaces
+  # Abrir la ventana del grafo: Window > graph. Saldrá algo como esto:
+
+
+  # Abrir la ventana de layout Window > Layout, elegir Yfan Hu (que tarda menos). Cuidado que el layout Force Atlas se queda en bucle con estos datos (al menos en mi ordenador)
+Se verá algo así
+  # Abrir la ventana de Ranking Window > Ranking para darle color y tamaños a nodos y enlaces.
+     * En la pestaña de nodes, pulsar el diamante (tamaño), elegir en el desplegable *Degree* y establecer el tamaño entre 5 y 20. Pulsar *Apply*. Observar como cambian de tamaño los nodos haciendo zoon (Rueda del ratón) y moviendo el grafo moviendo el ratón con el botón derecho pulsado. Se verá algo así:
+     * En la misma pestaña, pulsar en color, elegir la gama de color y pulsar *Apply*. Se verá algo así:
+
+
   # Abrir las ventanas de previsualización window > Preview y window > Preview settings
-  # Mirar cómo queda
+  # Mirar cómo queda, debe ser algo así:
+
   # Abrir la ventana de Window >  Partition  para darle color por grupos
+
   # previsualizar
   # Abrir la ventana de filtros Window > Filter >  : Filtrar por número de enlaces (Library >Topology > Degree Range)  y por grupos (Attributes > Partition > Grupos)
   # Mirar las estadísticas Windows > Statistics
