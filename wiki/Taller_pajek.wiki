@@ -2,7 +2,7 @@
 
 = Introducción =
 
-*[http://pajek.imfm.si/doku.php Pajek]*  (_Pajek_ significa araña en esloveno) es un programa para *visualizar* y *analizar*  grandes redes. Fue desarrollafo por [http://vlado.fmf.uni-lj.si/vlado/vlado.htm Vladimir Batagelj] (matématico) y [http://mrvar.fdv.uni-lj.si/ Andrej Mrvar] (sociólogo).  Se empezó a desarrollar en noviembre 1996 y se implementó en Delphi (Pascal). 
+*[http://pajek.imfm.si/doku.php Pajek]*  (_Pajek_ significa araña en esloveno) es un programa para *visualizar* y *analizar*  grandes redes. Fue desarrollado por [http://vlado.fmf.uni-lj.si/vlado/vlado.htm Vladimir Batagelj] (matématico) y [http://mrvar.fdv.uni-lj.si/ Andrej Mrvar] (sociólogo).  Se empezó a desarrollar en noviembre 1996 y se implementó en Delphi (Pascal). 
 
 Tiene una [http://vlado.fmf.uni-lj.si/pub/networks/pajek/doc/pajekman.pdf documentación]  extensa y un libro titulado [http://www.amazon.com/gp/product/0521602629/104-4818949-5145535?v=glance&n=283155 Exploratory Social Network Analysis with Pajek (Structural Analysis in the Social Sciences]
 
@@ -29,17 +29,17 @@ Se han generado automáticamente desde los tweets seleccionados del Turkey2010 d
 
 Se ha adoptado un *convenio de color*, tamaño de los nodos, tamaño de las fechas y _timestamp_:
   * Los nodos *rojos* son los más mencionados y los *verdes* los más activos twiteando.
-  * El tañamo de los nodos depende del número de enlaces entrantes y salientes. 
+  * El tamaño de los nodos depende del número de enlaces entrantes y salientes. 
   * El tamaño de los arcos depende del número de menciones entre los dos nodos.
   * A cada nodo se le asocia el _timestamp_ de su primera aparición en la red
-  * Al conjunto de menciones entre entre cada par de nodos se le asocia el _timestamp_ de su primera aparición.
+  * Al conjunto de menciones entre cada par de nodos se le asocia el _timestamp_ de su primera aparición.
   * Se han eliminado los nodos que no tenían ninguna mención 
 
 == Layouts ==
 
   * *Circular* Estructura circular de los nodos con enlaces entre ellos.
   * *Energy Kamada-Kawai* es un layout _spring model_ que busca la mínima energía entre nodos.
-  * *Energy Fruchterman-Reingold* es un layout _spring nodel_ que utiliza springs solo en los nodos conectados con un flecha y fuerzas respulsivas con el resto de los nodos. 
+  * *Energy Fruchterman-Reingold* es un layout _spring nodel_ que utiliza springs solo en los nodos conectados con un flecha y fuerzas repulsivas con el resto de los nodos. 
 
 == Formatos Salida==
 
@@ -47,7 +47,7 @@ No exporta a los clásicos formatos de imágenes como jpg, png y gif, solo al fo
 
  * Exportación en 2D: 
     * EPS/PS
-    * SGV (las imágenes SVG pueden ser abiertas con el programa [http://inkscape.org/?lang=es InkScape] para mejorar su presentación)
+    * SVG (las imágenes SVG pueden ser abiertas con el programa [http://inkscape.org/?lang=es InkScape] para mejorar su presentación)
     * bmp
  * Exportación en 3D:
     * 3XD
@@ -60,26 +60,29 @@ No exporta a los clásicos formatos de imágenes como jpg, png y gif, solo al fo
   # Abrir el programa pajek.exe
   # Leer la red (*File >Network > Read*  > Abrir fichero turkey2010_mentions.net )
   # Seleccionar opción de menú *Draw > Draw*
+  # Ajustar Opciones de Visualización  
+   * Seleccionar *Options > Size > Of Vertices Defined in Input File*
+   * Seleccionar *Options > Color > Vertices > As Defined in Input File*
   # En la ventana de *Draw* seleccionar *Layout > circular > original*  (se verán muchos nodos que no tienen conexión, aunque no estaban en el fichero de entrada)
+http://www.barriblog.com/taller/redes/turkey2010_pajek_circular_todos.jpg
 
 == Seleccionar solo los nodos que tiene conexión ==
 
-Los nodos que no tienen relaciones con otros no son relevantes. Para eliminar las entidades que pudieran estar aisladas y mejorar los resultados del análisis, se ejecutan los comandos :
+Los nodos que no tienen relaciones con otros no son relevantes. Para eliminar las entidades que pudieran estar aisladas y mejorar los resultados del análisis, se ejecutan los comandos:
   * *Net > Partitions > Degree > All*
   * *Operations > Extract from Network > Partition > 1-`*`*
-  * Seleccionar opcion de menú *Draw > Draw*
-  * En la ventana de *Draw* seleccionar *Layout >circular>original* (sSe verán solo los nodos que tiene  conexión).
-
-
-== Ajustar Opciones de Visualización ==
-  
-   * Seleccionar *Options > Size > Of Vertices Defined in Input File*
-   * Seleccionar *Options > Color > Vertices > As Defined in Input File*
+  * Seleccionar opción de menú *Draw > Draw*
+  * En la ventana de *Draw* seleccionar *Layout > circular > original* (Se verán solo los nodos que tienen conexión).
+http://www.barriblog.com/taller/redes/turkey2010_pajek_circular.jpg
 
 == Visualizar los distintos layouts ==
 
 En la ventana de Draw, seleccionar los distintos layouts y observar las diferencias entre las visualizaciones.
 
+  * *Energy Kamada-Kawai* 
+http://www.barriblog.com/taller/redes/turkey2010_pajek_kk.jpg
+  * *Energy Fruchterman-Reingold* 
+http://www.barriblog.com/taller/redes/turkey2010_pajek_fd.jpg
 == Visualizar en el tiempo ==
 
 Volver a la ventana principal y ejecutar el comando
@@ -94,6 +97,14 @@ Volver a la ventana principal y ejecutar el comando
 
 == Exportar ==
 Exportar a los distintos formatos de salida desde la ventana de *Draw*
+
+  * Exportar a SGV la la serie temporal del grafo
+    * situarse en a red de tiempo 1
+    * Seleccionar layout circular
+    * Activar la opción  *Export  > 2D  > SVG > Current and All subsequent*
+    * Exportar a SVG *Export > 2D > SVG >  General* 
+
+Debe generar un conjunto de páginas html que llevarán incrustado la imagen SVG, en la que se podrá navegar hacia adelante y hacia atrás, *[http://www.barriblog.com/taller/redes/turkey2010_pajek001.htm como en esta página]*
 
 
 == Guardar el trabajo realizado ==
