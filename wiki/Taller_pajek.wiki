@@ -98,7 +98,7 @@ Volver a la ventana principal y ejecutar el comando
 == Exportar ==
 Exportar a los distintos formatos de salida desde la ventana de *Draw*
 
-  * Exportar a SGV la la serie temporal del grafo
+  * Exportar a SVG la la serie temporal del grafo
     * Situarse en a red de tiempo 1
     * Seleccionar layout circular
     * Activar la opción  *Export  > 2D  > SVG > Current and All subsequent*
