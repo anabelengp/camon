@@ -4,13 +4,15 @@
 
 = Visualizaciones =
 
-  * *Bubble chart*: usuarios más activos
+  * *Bubble chart*: Jugadores más mencionados
     * *Dataset*: hoja de totales [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdFZKZ3k2clQ2Nkxad1NWZVJSQkJBWGc&hl=en#gid=0 Turkey2010_total], tabla Top_players
     * *ManyEyes*: 
       * [http://manyeyes.alphaworks.ibm.com/manyeyes/datasets/new Upload data set] 
       *  Copiar/pegar tabla al text área, poner el título, la fuente de datos y los tags
       *  Subir Dataset
       *  Visualizar con *Bubble chart*
+<a href='http://www-958.ibm.com/me/visualizations/jugadores-mas-mencionados-en-twitt/comments/22d73092d71211df8cb6000255111976' style='margin: 0pt; padding: 0pt;'>  <img alt="22930296-d712-11df-8cb6-000255111976" src="http://www-958.ibm.com/me/files/thumbnails/22930296-d712-11df-8cb6-000255111976.png?size=200x150" style="border: 1px solid #6898C8; margin: 0; padding-top: 10px; padding-bottom: 15px;" />  <img alt="Blog_this_caption" src="http://www-958.ibm.com/me/images/blog_this_caption.jpg" style="border: 0pt none ; margin: 0pt; padding: 0pt; display: block; position: relative; top: -9px;" /></a>        
+
   * *Word Cloud Generator*: Palabras más usadas
     * *Dataset*: hoja de totales [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdFZKZ3k2clQ2Nkxad1NWZVJSQkJBWGc&hl=en#gid=0 Turkey2010_total], tabla Top_words
     * *ManyEyes*: 
@@ -18,6 +20,7 @@
       *  Copiar/pegar tabla al text área, poner el título, la fuente de datos y los tags
       *  Subir Dataset
       *  Visualizar con *Word cloud generate*
+<a href='http://www-958.ibm.com/me/visualizations/palabras-mas-usadas-en-twitter-en-/comments/24c12eaad71511dfa25d000255111976' style='margin: 0pt; padding: 0pt;'>  <img alt="246a562a-d715-11df-a25d-000255111976" src="http://www-958.ibm.com/me/files/thumbnails/246a562a-d715-11df-a25d-000255111976.png?size=200x150" style="border: 1px solid #6898C8; margin: 0; padding-top: 10px; padding-bottom: 15px;" />  <img alt="Blog_this_caption" src="http://www-958.ibm.com/me/images/blog_this_caption.jpg" style="border: 0pt none ; margin: 0pt; padding: 0pt; display: block; position: relative; top: -9px;" /></a>
   * *Stack Graph*: Menciones por países
     * *Dataset*: hoja por días y valores [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdE41c2RTWkRDdkx5M3NiZHB2WVhELVE&hl=en#gid=0 turkey2010_day_count] , tabla Countries_day_c_T 
     * *ManyEyes*:
@@ -25,6 +28,7 @@
       *  Copiar/pegar tabla al text área, poner el título, la fuente de datos y los tags
       *  Subir Dataset
       *  Visualizar con *Stack Graph*
+<a href='http://www-958.ibm.com/me/visualizations/menciones-de-paises-en-cada-uno-de/comments/e08647f6d71511dfaa9a000255111976' style='margin: 0pt; padding: 0pt;'>  <img alt="E04be7be-d715-11df-aa9a-000255111976" src="http://www-958.ibm.com/me/files/thumbnails/e04be7be-d715-11df-aa9a-000255111976.png?size=200x150" style="border: 1px solid #6898C8; margin: 0; padding-top: 10px; padding-bottom: 15px;" />  <img alt="Blog_this_caption" src="http://www-958.ibm.com/me/images/blog_this_caption.jpg" style="border: 0pt none ; margin: 0pt; padding: 0pt; display: block; position: relative; top: -9px;" /></a>
   * *TreeMap*: Aplicaciones utilizadas
     * *Dataset*: Hola de Totales [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdFZKZ3k2clQ2Nkxad1NWZVJSQkJBWGc&hl=en#gid=0 Turkey2010_total] , tabla Top_Apps
     * *ManyEyes*:
@@ -32,6 +36,7 @@
       *  Copiar/pegar tabla al text área, poner el título, la fuente de datos y los tags
       *  Subir Dataset
       *  Visualizar con *Tree map*
+<a href='http://www-958.ibm.com/me/visualizations/apps-desde-las-que-twitearon-en-el/comments/88177386d71c11dfb7b2000255111976' style='margin: 0pt; padding: 0pt;'>  <img alt="87915670-d71c-11df-b7b2-000255111976" src="http://www-958.ibm.com/me/files/thumbnails/87915670-d71c-11df-b7b2-000255111976.png?size=200x150" style="border: 1px solid #6898C8; margin: 0; padding-top: 10px; padding-bottom: 15px;" />  <img alt="Blog_this_caption" src="http://www-958.ibm.com/me/images/blog_this_caption.jpg" style="border: 0pt none ; margin: 0pt; padding: 0pt; display: block; position: relative; top: -9px;" /></a>
   * *World Map* : Menciones a países
     * *Dataset*: Hoja de totales [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdFZKZ3k2clQ2Nkxad1NWZVJSQkJBWGc&hl=en#gid=0 Turkey2010_total] , tabla Top_Countries 
     * *ManyEyes*:
@@ -39,4 +44,4 @@
       *  Copiar/pegar tabla al text área, poner el título, la fuente de datos y los tags
       *  Subir Dataset
       *  Visualizar con *World Map *
-  * *Network diagram*: Relaciones entre usuarios
+<a href='http://www-958.ibm.com/me/visualizations/menciones-a-paises-durante-el-turk/comments/2c662862d76611df80a5000255111976' style='margin: 0pt; padding: 0pt;'>  <img alt="2c14807a-d766-11df-80a5-000255111976" src="http://www-958.ibm.com/me/files/thumbnails/2c14807a-d766-11df-80a5-000255111976.png?size=200x150" style="border: 1px solid #6898C8; margin: 0; padding-top: 10px; padding-bottom: 15px;" />  <img alt="Blog_this_caption" src="http://www-958.ibm.com/me/images/blog_this_caption.jpg" style="border: 0pt none ; margin: 0pt; padding: 0pt; display: block; position: relative; top: -9px;" /></a>
