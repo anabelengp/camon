@@ -62,18 +62,71 @@ Turkey2010_most_mentions.gdf
 
 == Bajar los ficheros entrada y abrir programa ==
 
-  # Bajar los ficheros en formato GDF:  [http://barriblog.com/taller/redes/turkey2010_mentions_most_nodes.gdf turkey2010_mentions_most_nodes.gdf]
-  # Abrir el programa gephi
-  # Abrir un nuevo proyecto *File > Open* En la esquina inferior derecha pondrá workspace  0 (puede haber más de un workspace). Aparecerá una ventana como esta:
-  # Si no aparece abierta la ventana *Graph*, abrirla con  *Window > Graph*. *nota*: El zoom del grafo se hace con la rueda del ratón y se mueve pulsando el botón derecho a la vez que se mueve el ratón. La ventana *Graph* es interactiva y cualquier cambio que se aplique al grafo queda reflejado. También podemos actuar sobre los nodos directamente con el ratón. Debe salir algo así:
-  # Para dale forma al grafo, abrir la ventana de layout *Window > Layout* y  elegir un layout. En este caso se ha elegido *Force Atlas*. Debe verse algo así:
-  # Para darle color y tamaños a los nodos según la importancia, abrir la ventana  *Window > Ranking* 
-     * *Tamaño*: En la pestaña de *Nodes*, pulsar el *diamante*, elegir en el desplegable *Degree* (Número de enlaces del nodo) y establecer el tamaño entre 5 y 20. Pulsar *Apply*. Observar cómo cambian de tamaño los nodos (usar zoom si no se aprecia bien en la vista del grafo). Se verá algo así:
-     * *Color*: En la misma pestaña, pulsar en color, elegir la gama de color y pulsar *Apply*. Se verá algo así:
-  # Para ver cual será el aspecto final, abrir las ventanas de previsualización *Window > Preview* y *Window > Preview settings*. *Nota*: La ventana de preview no es interactiva. Pulsar en *Refresh* y se debe ver algo así:
-  # Para darle color a los nodos según una agrupación, abrir la ventana  *Window > Partition*. Aparecen los distintos grupos (Si no aparece ninguno pulsar en el icono de refrescar). Elegir *Group* Pulsar *Apply* y se verá como ahora los nodos están coloreados según los grupos. La previsualización debe ser algo así:
-  # Para filtrar nodos del grafo, abrir la ventana de filtros *Window > Filters*. En la ventana de *Filters* aparecen todas las opciones de filtrado de nodos. Vamos a ver dos casos:
+  * Bajar los ficheros en formato GDF:  [http://barriblog.com/taller/redes/turkey2010_mentions_most_nodes.gdf turkey2010_mentions_most_nodes.gdf]
+  * Abrir el programa gephi
+  * Abrir un nuevo proyecto *File > Open* En la esquina inferior derecha pondrá workspace  0 (puede haber más de un workspace). Aparecerá una ventana como esta:
+http://www.barriblog.com/taller/redes/turkey2010_gephi_read.jpg
+
+
+  * Si no aparece abierta la ventana *Graph*, abrirla con  *Window > Graph*. 
+
+{{{
+*nota*: El zoom del grafo se hace con la rueda del ratón y se mueve pulsando el botón derecho a la vez que se mueve el ratón. 
+        La ventana Graph es interactiva y cualquier cambio que se aplique al grafo queda reflejado. 
+        Se puede actuar sobre los nodos directamente con el ratón.
+}}}
+
+    Debe salir algo así:
+
+http://www.barriblog.com/taller/redes/turkey2010_gephi_sin_layaout.jpg
+
+
+  * Para dale forma al grafo, abrir la ventana de layout *Window > Layout* y  elegir un layout. En este caso se ha elegido *Force Atlas*. 
+
+  Tendrá este aspecto:
+
+http://www.barriblog.com/taller/redes/turkey2010_gephi_force_atlas_bn.jpg
+
+  * Para darle color y tamaños a los nodos según la importancia, abrir la ventana  *Window > Ranking* 
+     * *Tamaño*: En la pestaña de *Nodes*, pulsar el *diamante*, elegir en el desplegable *Degree* (Número de enlaces del nodo) y establecer el tamaño entre 5 y 20. Pulsar *Apply*. Observar cómo cambian de tamaño los nodos (usar zoom si no se aprecia bien en la vista del grafo). 
+
+    Así se verá el tamaño:
+http://www.barriblog.com/taller/redes/turkey2010_gephi_force_atlas_tamanio.jpg
+     * *Color*: En la misma pestaña, pulsar en color, elegir la gama de color y pulsar *Apply*. 
+
+    Así se verá el color:
+
+http://www.barriblog.com/taller/redes/turkey2010_gephi_force_atlas_color.jpg
+
+  * Para ver cual será el aspecto final, abrir las ventanas de previsualización *Window > Preview* y *Window > Preview settings*. 
+
+{{{   *Nota*: La ventana de preview no es interactiva.}}}
+
+    Pulsar en *Refresh* y Tendrá este aspecto:
+
+
+http://www.barriblog.com/taller/redes/turkey2010_gephi_force_atlas_color_preview.jpg
+ 
+ * Para darle color a los nodos según una agrupación, abrir la ventana  *Window > Partition*. Aparecen los distintos grupos (Si no aparece ninguno pulsar en el icono de refrescar). Elegir *Group* Pulsar *Apply* y se verá como ahora los nodos están coloreados según los grupos por estos colores:
+    * *Rojo* Los más mencionados
+    * *Azul* los más activos (que más han twiteado)
+    * *verde* El resto
+
+   Esta es la previsualización resultante:
+http://www.barriblog.com/taller/redes/turkey2010_gephi_force_atlas_group.jpg
+
+ ¿Pero que es esa mancha grande de la izquierda?
+
+  Es una celebrity (Justin Bieber) que ha tenido muchísimas menciones de un fan. 
+
+  Este sería el zoom:
+
+http://www.barriblog.com/taller/redes/turkey2010_gephi_force_atlas_justin_bieber.jpg
+
+  * Para filtrar nodos del grafo, abrir la ventana de filtros *Window > Filters*. En la ventana de *Filters* aparecen todas las opciones de filtrado de nodos. Vamos a ver dos casos:
     * *Filtrado por enlaces*: Seleccionar  *Library >Topology > Degree Range* y moviendo la barra inferior para ajustar el rango de enlaces del nodo y pulsando *Filter* se verá como va cambiando el grafo conforme movemos la barra inferior.
+
+
     * *Filtrado por grupos*: Seleccionar *Attributes > Partition > Grupos*. Si seleccionamos *Mentions* y *Twitter* debe aparece algo así:
   # Finalmente, mirar las estadísticas *Windows > Statistics*
 
