@@ -4,8 +4,12 @@
 
 *[http://gephi.org/ Gephi]* es una plataforma Open Source para el análisis y visualización de redes. Actualmente es un [http://consortium.gephi.org/ Consorcio] para garantizar el desarrollo de la plataforma.
  
+  Funciona sobre Java y por tanto es multiplataforma
 
-Funciona sobre Java y por tanto es multiplataforma
+  Vídeo de la versión =0.7
+
+
+<wiki:video url="http://www.youtube.com/watch?v=bXCBh6QH5W0"/>
 
 =Características=
     * Interfaz intuitiva
@@ -21,7 +25,7 @@ Funciona sobre Java y por tanto es multiplataforma
     * *Color*: El color del los nodos se puede aplicar por paticiones o por ranking
     * *Tamaño nodos/enlaces*: El tamaño de los nodos y los enlaces se puede representar según su importancia
     * Tiene un conjunto de atributos configurables como el font, el color de y tamaño del font, etc.. 
-    * Es posible generar grafos dinámicos en función del tiempos del enlace (requiere formato GEXF).
+    * Es posible generar grafos dinámicos en función del tiempos del enlace (requiere formato GDF).
 
 =Data Set=
 
@@ -32,14 +36,10 @@ Desde [http://code.google.com/p/camon/wiki/Datset los Tweets obtenidos] del pasa
 
 == Datos de entrada==
 
-En el taller los datos de entrada estaban en formato CSV 
-Los datos de entrada están en formato CSV, [http://barriblog.com/taller/redes/turkey2010_mentions_most_nodes.csv los nodos] y [http://barriblog.com/taller/redes/turkey2010_mentions_most_arcs.csv los enlaces]
-Y no nos funcionó bien las particiones. Consultado el foro de Gephi veo que los  CSV no
+Para evitar complicaciones en la conversión a otro formato propuse que en el taller la entrada fuera en formato CSV, un formato ampliamente usado en otras herramientas, [http://barriblog.com/taller/redes/turkey2010_mentions_most_nodes.csv los nodos] y [http://barriblog.com/taller/redes/turkey2010_mentions_most_arcs.csv los enlaces]. Al hacer la práctica  de las particiones, no funcionó bien porque el programa no entendía los atributos del nodo, por ejemplo el grupo al que pertenecía el nodo( Top_mentions: grupo de los 50 usuarios más mencionados, Top_twitters grupo de los más activos y normales, el resto de usuarios). Consulté el foro de Gephi vi que los  CSV no
 [http://forum.gephi.org/viewtopic.php?f=29&t=577 sirven cuando se quiere importar las propieddaes del nodo]
-Para dejar la práctica funcionando al 100% los datos de entrada estarán en formato GEXF
-
-
-
+Para dejar la práctica funcionando al 100% los datos de entrada estarán en formato GDF, que es un formato muy sencillo, casi como el CSV. Por tanto el fichero de entrada será:
+Turkey2010_most_mentions.gdf
 
 
 
@@ -62,30 +62,20 @@ Para dejar la práctica funcionando al 100% los datos de entrada estarán en for
 
 == Bajar los ficheros entrada y abrir programa ==
 
-  # Bajar los ficheros en formato CSV:  [http://barriblog.com/taller/redes/turkey2010_mentions_most_nodes.csv los nodos] y [http://barriblog.com/taller/redes/turkey2010_mentions_most_arcs.csv los enlaces]
+  # Bajar los ficheros en formato GDF:  [http://barriblog.com/taller/redes/turkey2010_mentions_most_nodes.gdf turkey2010_mentions_most_nodes.gdf]
   # Abrir el programa gephi
-  # Abrir un nuevo proyecto File > New project (esquina inferior derecha pondrá workspace  0 (puede haber más de un workspace)
-  # Abrir la ventana de la tabla de datos para importar los CSVs Window > Data table
-  # Importar los nodos:  Pulsar en la ventana de Data Table Nodes  e import CSV (los nombres de las dos primeras columnas deben ser *Id* *Label* para que lo entienda)
-  # Importar los enlaces: Pulsar en la ventana de Data Table Edges e import CSV (los nombres de las tres primeras columnas deben *Source*,*Target*, *Weight* para que lo entienda)
-  # Abrir la ventana del grafo: Window > graph. Saldrá algo como esto:
-
-
-  # Abrir la ventana de layout Window > Layout, elegir Yfan Hu (que tarda menos). Cuidado que el layout Force Atlas se queda en bucle con estos datos (al menos en mi ordenador)
-Se verá algo así
-  # Abrir la ventana de Ranking Window > Ranking para darle color y tamaños a nodos y enlaces.
-     * En la pestaña de nodes, pulsar el diamante (tamaño), elegir en el desplegable *Degree* y establecer el tamaño entre 5 y 20. Pulsar *Apply*. Observar como cambian de tamaño los nodos haciendo zoon (Rueda del ratón) y moviendo el grafo moviendo el ratón con el botón derecho pulsado. Se verá algo así:
-     * En la misma pestaña, pulsar en color, elegir la gama de color y pulsar *Apply*. Se verá algo así:
-
-
-  # Abrir las ventanas de previsualización window > Preview y window > Preview settings
-  # Mirar cómo queda, debe ser algo así:
-
-  # Abrir la ventana de Window >  Partition  para darle color por grupos
-
-  # previsualizar
-  # Abrir la ventana de filtros Window > Filter >  : Filtrar por número de enlaces (Library >Topology > Degree Range)  y por grupos (Attributes > Partition > Grupos)
-  # Mirar las estadísticas Windows > Statistics
+  # Abrir un nuevo proyecto *File > Open* En la esquina inferior derecha pondrá workspace  0 (puede haber más de un workspace). Aparecerá una ventana como esta:
+  # Si no aparece abierta la ventana *Graph*, abrirla con  *Window > Graph*. *nota*: El zoom del grafo se hace con la rueda del ratón y se mueve pulsando el botón derecho a la vez que se mueve el ratón. La ventana *Graph* es interactiva y cualquier cambio que se aplique al grafo queda reflejado. También podemos actuar sobre los nodos directamente con el ratón. Debe salir algo así:
+  # Para dale forma al grafo, abrir la ventana de layout *Window > Layout* y  elegir un layout. En este caso se ha elegido *Force Atlas*. Debe verse algo así:
+  # Para darle color y tamaños a los nodos según la importancia, abrir la ventana  *Window > Ranking* 
+     * *Tamaño*: En la pestaña de *Nodes*, pulsar el *diamante*, elegir en el desplegable *Degree* (Número de enlaces del nodo) y establecer el tamaño entre 5 y 20. Pulsar *Apply*. Observar cómo cambian de tamaño los nodos (usar zoom si no se aprecia bien en la vista del grafo). Se verá algo así:
+     * *Color*: En la misma pestaña, pulsar en color, elegir la gama de color y pulsar *Apply*. Se verá algo así:
+  # Para ver cual será el aspecto final, abrir las ventanas de previsualización *Window > Preview* y *Window > Preview settings*. *Nota*: La ventana de preview no es interactiva. Pulsar en *Refresh* y se debe ver algo así:
+  # Para darle color a los nodos según una agrupación, abrir la ventana  *Window > Partition*. Aparecen los distintos grupos (Si no aparece ninguno pulsar en el icono de refrescar). Elegir *Group* Pulsar *Apply* y se verá como ahora los nodos están coloreados según los grupos. La previsualización debe ser algo así:
+  # Para filtrar nodos del grafo, abrir la ventana de filtros *Window > Filters*. En la ventana de *Filters* aparecen todas las opciones de filtrado de nodos. Vamos a ver dos casos:
+    * *Filtrado por enlaces*: Seleccionar  *Library >Topology > Degree Range* y moviendo la barra inferior para ajustar el rango de enlaces del nodo y pulsando *Filter* se verá como va cambiando el grafo conforme movemos la barra inferior.
+    * *Filtrado por grupos*: Seleccionar *Attributes > Partition > Grupos*. Si seleccionamos *Mentions* y *Twitter* debe aparece algo así:
+  # Finalmente, mirar las estadísticas *Windows > Statistics*
 
 
 
