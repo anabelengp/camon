@@ -36,23 +36,137 @@
  
 	<mx:Script>
 		<![CDATA[
+			import mx.collections.ArrayCollection;
+			import mx.collections.ArrayList;
+			import mx.collections.IViewCursor;
+			import mx.controls.Alert;
+			
 			import org.axiis.core.AxiisSprite;
 			import org.axiis.data.DataSet;
 
 			private var ds:DataSet = new DataSet();
+			
+			private var date_list:ArrayCollection = null;
+			
+			private function get_top_players_count (players:ArrayCollection) : int {
+				var cursor:IViewCursor = players.createCursor();
+				
+				var total_sum:int = 0;
+				
+				while (!cursor.afterLast) {
+					total_sum += cursor.current.count;	
+					
+					cursor.moveNext();
+				}
+				
+				return total_sum;
+			}
+			
+			private function aggregate_resting_players () : void {
+				var cursor:IViewCursor = date_list.createCursor();
+				
+				while (!cursor.afterLast) {
+					var players:ArrayCollection = cursor.current.players;
+					var total:int = cursor.current.total;
+					
+					var top_players_count:int = get_top_players_count(players);
+					var resting_players_count:int = total - top_players_count;
+					
+					var agregated_player:Object = new Object();
+					
+					agregated_player.name = "Resto de Jugadores";
+					agregated_player.count = resting_players_count;
+					
+					players.addItem(agregated_player);
+					
+					cursor.moveNext();
+				}
+			}
+			
+			private function update_players (date_info:Object, player:Object) : void {
+				var players:Object = date_info.players;
+				
+				if (players.length < num_players) {
+					players.addItem(player);
+					
+					return;
+				}
+				
+				//Change one player with other
+				var cursor:IViewCursor = players.createCursor();
+				
+				while (!cursor.afterLast) {
+					
+					if (cursor.current.count < player.count) {
+						cursor.current.name = player.name;
+						cursor.current.count = player.count;
+						
+						return;
+					}
+					
+					cursor.moveNext();
+				}
+			}
 
+			private function createDateInfo (date:String) : Object {				
+				var date_info:Object = new Object();
+				
+				date_info.name = date;
+				date_info.total = 0;
+				date_info["players"] = new ArrayCollection();
+				
+				date_list.addItem(date_info);
+				
+				return date_info;
+			}
+			
+			private function getDateInfo (date:String) : Object {
+				var cursor:IViewCursor = date_list.createCursor();
+				
+				while (!cursor.afterLast) {
+					
+					if (cursor.current.name == date) {
+						return cursor.current;
+					}
+					
+					cursor.moveNext();
+				}
+				
+				return null;
+			}
+			
 			public function start():void
 			{
-				//process our data
-				ds.processXmlString(countryData);
-
-				//perform aggregations to create data values for our nested wedges
-				ds.aggregateData(ds.data.object, "country.medal", ["count"]);
-				ds.aggregateData(ds.data.object, "country", ["aggregates.medal_count_sum"]);
-
-				//Set our max scale value.
-				dataProvider = ds.data.object.country;
-
+				ds.processCsvAsTable(payload, false);
+				
+				date_list = new ArrayCollection();
+				 
+				for each (var row:Object in ds.data.table.rows) {
+					var name:String = row.columns[0].value;
+					var date:String = row.columns[1].value;
+					var count:int = parseInt(row.columns[2].value);
+					
+					var date_info:Object = getDateInfo(date);
+					
+					if ( date_info == null ) {
+						date_info = createDateInfo(date);
+					} 
+					
+					date_info.total += count;
+					
+					var player_date_info:Object = new Object();
+					
+					player_date_info.name = name;
+					player_date_info.count = count;
+					
+					update_players(date_info, player_date_info);
+				}
+				
+				aggregate_resting_players();
+				
+				
+				dataProvider = date_list;
+				
 				dc.invalidateDisplayList();
 			}
 
@@ -63,9 +177,9 @@
 				{
 					return "<b>" + axiisSprite.data["name"] + " Total Medals</b><br/>" + axiisSprite.data["competitors"];
 				}
-				else if (axiisSprite.data["count"] != null && axiisSprite.data["category"] != null)
+				else if (axiisSprite.data["count"] != null && axiisSprite.data["name"] != null)
 				{
-					return "<b>" + axiisSprite.data["category"] + " Total Medals</b><br/>" + axiisSprite.data["count"];
+					return "<b>" + axiisSprite.data["name"] + " <br/>" + axiisSprite.data["count"];
 				}
 				return "";
 			}
@@ -92,10 +206,13 @@
 	<mx:Style source="styles/Axiis_Examples.css"/>
 	
 	<!-- Data payload -->
-	<mx:String id="countryData" source="data/2008_Olympics.xml"/>
+	<mx:String id="payload" source="data/turkey2010_day_list.csv"/>
 
 	<!-- Data Provider -->
 	<mx:Object id="dataProvider"/>
+
+	<!-- Number of players per date -->
+	<mx:int id="num_players">4</mx:int>
 
 	<!-- Preference Settings -->
 	<mx:Number id="angleGap">.5</mx:Number>
@@ -129,7 +246,7 @@
 				width="{dc.width}"
 				height="{dc.height}"
 				labelField="name"
-				dataField="aggregates.medal_count_sum"
+				dataField="total"
 				fill="{innerWedgeFill}"
 				fontFamily="Myriad Pro"
 				fontSize="14"
@@ -138,7 +255,7 @@
  				
  				<axiis:layouts>
  					<axiis:WedgeStackGroup id="outerWedgeGroup"
- 						dataProvider="{innerWedgeGroup.currentDatum.medal}"
+ 						dataProvider="{innerWedgeGroup.currentDatum.players}"
  						maxArc="{innerWedgeGroup.wedge.arc}"
  						startAngle="{innerWedgeGroup.wedge.startAngle}"
  						alignTextOuter="true"
@@ -148,7 +265,7 @@
  						labelRadiusRatio="1.035"
  						width="{dc.width}"
  						height="{dc.height}"
- 						labelField="category"
+ 						labelField="name"
  						dataField="count"
  						dataTipLabelFunction="{dataTipFunction}"
  						fill="{outerWedgeFill}"
