@@ -9,23 +9,51 @@ package
 	import flare.vis.data.DataSprite;
 	import flare.vis.operator.layout.StackedAreaLayout;
 	
-	import flash.geom.Rectangle;
-	
 	import flash.display.Shape;
 	import flash.display.StageQuality;
 	import flash.events.Event;
 	import flash.events.MouseEvent;
+	import flash.geom.Rectangle;
 	
-	/**
-	 * Demo showcasing an animated stacked area chart.
-	 */
+	[SWF(backgroundColor="#ffffff", frameRate="30")]
 	public class Acumulador extends App
 	{
 		private var vis:Visualization;
 		private var labelMask:Shape = new Shape();
 		
+		private var _url:String = 
+			"http://localhost:8080/turkey2010_day_count.csv";
+		
 		protected override function init():void
 		{
+			import es.camon.CSVUtils;
+			
+			// download and parse CSV file
+			var csvUtils:CSVUtils = new CSVUtils(_url, function():void {
+				
+				var data:Data = buildData(csvUtils.getColumnsData(new Array("JUGADOR", "REPETICIONES", "PAIS")));
+				visualize(data);
+			});			
+		}
+		
+		/**
+		 * Creates the visualized data.
+		 */
+		public static function buildData(jugadores:Array):Data
+		{
+			var jugador:Object;
+			
+			// build package tree
+			for each (jugador in jugadores) {
+				var pais:String = jugador["PAIS"];
+				var nombre_jugador:String = jugador["JUGADOR"];
+				var repeticiones:String = jugador["REPETICIONES"];
+			}
+			
+			return new Data();
+		}
+		
+		private function visualize(data:Data):void {
 			// get data set with data values and column names
 			var dataset:Object = getData(500);
 			
@@ -47,8 +75,7 @@ package
 			vis.xyAxes.yAxis.labels.mask = labelMask;
 		}
 		
-		public override function resize(b:Rectangle):void
-		{
+		public override function resize(b:Rectangle):void {
 			if (vis) {
 				// make some extra room for the treemap border
 				b.x += 1; b.y += 1; b.width -= 1; b.height -= 1;
