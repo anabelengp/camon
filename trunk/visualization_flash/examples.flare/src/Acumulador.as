@@ -1,7 +1,9 @@
 package 
 {
+	
 	import flare.animate.TransitionEvent;
 	import flare.animate.Transitioner;
+	import flare.data.DataSet;
 	import flare.util.Colors;
 	import flare.util.Shapes;
 	import flare.vis.Visualization;
@@ -15,25 +17,23 @@ package
 	import flash.events.MouseEvent;
 	import flash.geom.Rectangle;
 	
+	import mx.collections.ArrayCollection;
+	
+	import org.axiis.data.DataSet;
+	
 	[SWF(backgroundColor="#ffffff", frameRate="30")]
 	public class Acumulador extends App
 	{
 		private var vis:Visualization;
 		private var labelMask:Shape = new Shape();
 		
-		private var _url:String = 
-			"http://localhost:8080/turkey2010_day_count.csv";
+		private var ds:org.axiis.data.DataSet = new org.axiis.data.DataSet();
 		
-		protected override function init():void
-		{
-			import es.camon.CSVUtils;
+		private var file_name:String = "data/kk.vsc";
+		
+		protected override function init():void {
+			ds.processCsvAsTable(file_name, false);
 			
-			// download and parse CSV file
-			var csvUtils:CSVUtils = new CSVUtils(_url, function():void {
-				
-				var data:Data = buildData(csvUtils.getColumnsData(new Array("JUGADOR", "REPETICIONES", "PAIS")));
-				visualize(data);
-			});			
 		}
 		
 		/**
