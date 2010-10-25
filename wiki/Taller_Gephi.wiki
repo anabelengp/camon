@@ -127,7 +127,7 @@ http://www.barriblog.com/taller/redes/turkey2010_gephi_force_atlas_justin_bieber
     * *Filtrado por enlaces*: Seleccionar  *Library >Topology > Degree Range* y moviendo la barra inferior para ajustar el rango de enlaces del nodo y pulsando *Filter* se verá como va cambiando el grafo conforme movemos la barra inferior.  Este es el grafo resultante de filtrar 7 - 132:
 http://www.barriblog.com/taller/redes/turkey2010_gephi_force_atlas_filter.jpg
 
-    * *Filtrado por grupos*: Seleccionar *Attributes > Partition > Grupos*. Si seleccionamos *Mentions* y *Twitter*  y le hacemos algunos ajustes en los setting de previsualización:
+    * *Filtrado por grupos*: Seleccionar *Attributes > Partition > Grupos*. Si se selecciona *Mentions* y *Twitter*  y se le hacen algunos ajustes en los setting de previsualización:
   * Backgroud negro
   * Hacer visibles las etiquetas de los nodos
   * Poner las etiquetas en color blanco
