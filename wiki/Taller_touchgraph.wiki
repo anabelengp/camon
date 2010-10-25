@@ -86,14 +86,14 @@ http://www.barriblog.com/taller/redes/touchgraph_al_colorsl.jpg
 
   http://www.barriblog.com/taller/redes/touchgraph_al_color_halol.jpg
 
-  * Ajustar el layout: Seleccionar Settings > Graph layout y ajustar la fuerza de repulsión del nodo y de tensión de las relaciones.
+  * Ajustar el layout: *Seleccionar Settings > Graph layout* y ajustar la fuerza de repulsión del nodo y de tensión de las relaciones.
   * Probar los Halos con los distintos atributos
 
 
 
 == Exportar ==
-  # Exportar el gráfico File > Export > Image
+  # Exportar el gráfico *File > Export > Image*
 
 
 == Guardar el trabajo realizado ==
-   * Salvar el proyecto File > Save 
+   * Salvar el proyecto *File > Save* 
