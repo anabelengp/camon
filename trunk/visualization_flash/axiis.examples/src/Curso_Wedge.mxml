@@ -212,7 +212,7 @@
 	<mx:Object id="dataProvider"/>
 
 	<!-- Number of players per date -->
-	<mx:int id="num_players">4</mx:int>
+	<mx:int id="num_players">2</mx:int>
 
 	<!-- Preference Settings -->
 	<mx:Number id="angleGap">.5</mx:Number>
@@ -335,5 +335,7 @@
 		bottom="{height*.025}"
 		horizontalCenter="0"
 		color="0"/>
+	
+	<mx:HSlider x="220" y="19" width="228" height="16" minimum="1" maximum="50"/>
 
 </mx:Application>
