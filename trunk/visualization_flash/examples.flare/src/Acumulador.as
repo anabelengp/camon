@@ -16,6 +16,8 @@ package
 	import flash.events.Event;
 	import flash.events.MouseEvent;
 	import flash.geom.Rectangle;
+	import flash.net.URLLoader;
+	import flash.net.URLRequest;
 	
 	import mx.collections.ArrayCollection;
 	
@@ -29,11 +31,23 @@ package
 		
 		private var ds:org.axiis.data.DataSet = new org.axiis.data.DataSet();
 		
-		private var file_name:String = "data/kk.vsc";
+		private var file_name:String = "data/turkey2010_day_count.csv";
 		
 		protected override function init():void {
-			ds.processCsvAsTable(file_name, false);
+			var loader:URLLoader = new URLLoader(new URLRequest(file_name));
+			loader.addEventListener(Event.COMPLETE, start_rendering);
+		}
+		
+		private function start_rendering(e:Event):void {
+			ds.processCsvAsTable(e.target.data, false);
 			
+			ds.pivotTable(0);
+			
+			for each (var row:Object in ds.data.pivot.rows) {
+				var name:String = row.columns[0].value;
+				
+				trace(name);
+			}
 		}
 		
 		/**
