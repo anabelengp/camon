@@ -61,6 +61,11 @@ package
 			
 			var header:Array = get_header();
 			
+			vis.bounds.x = 20;
+			vis.bounds.y = 20;
+			vis.bounds.width = 1400;
+			vis.bounds.height = 650;
+			
 			vis.operators.add(new StackedAreaLayout(header));
 			
 			vis.data.nodes.visit(function(d:DataSprite):void {
@@ -76,6 +81,9 @@ package
 			// add mask to hide animating labels
 			vis.xyAxes.addChild(labelMask);
 			vis.xyAxes.yAxis.labels.mask = labelMask;
+			
+			// perform layout
+			//resize(_appBounds);
 		}
 		
 		public override function resize(b:Rectangle):void {
@@ -102,17 +110,17 @@ package
 			
 			var result:Data = new Data();
 			var data:DataSprite = null;
-			var value:String = null, word:String = null, date:String = null;
+			var value:int = 0, word:String = null, date:String = null;
 			
 			for each (var row:Object in ds.data.table.rows) {
+				word = row.columns[0].value;
 				data = result.addNode();
-				word = row.columns[0].value
 				
 				for (var i:uint = 1; i<cols.length; i++) {
 					date  = cols[i];
-					value = row.columns[i].value;
+					value = parseInt(row.columns[i].value);
 					
-					data.data[date] = value;
+					data.data[date] = value; 
 				}
 			}
 			
