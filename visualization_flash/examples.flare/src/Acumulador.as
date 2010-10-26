@@ -41,39 +41,28 @@ package
 		private function start_rendering(e:Event):void {
 			ds.processCsvAsTable(e.target.data, false);
 			
-			ds.pivotTable(0);
-			
-			for each (var row:Object in ds.data.pivot.rows) {
-				var name:String = row.columns[0].value;
-				
-				trace(name);
-			}
+			visualize(build_data());
 		}
 		
-		/**
-		 * Creates the visualized data.
-		 */
-		public static function buildData(jugadores:Array):Data
-		{
-			var jugador:Object;
+		private function get_header() : Array {
+			var original_header:Array = ds.data.table.header;
+			var header:Array = new Array();
 			
-			// build package tree
-			for each (jugador in jugadores) {
-				var pais:String = jugador["PAIS"];
-				var nombre_jugador:String = jugador["JUGADOR"];
-				var repeticiones:String = jugador["REPETICIONES"];
+			for (var i:uint = 1; i<original_header.length; i++) {
+				header.push(original_header[i]);
 			}
 			
-			return new Data();
+			return header;
 		}
 		
 		private function visualize(data:Data):void {
-			// get data set with data values and column names
-			var dataset:Object = getData(500);
-			
 			// create the visualization
-			vis = new Visualization(dataset.data);
-			vis.operators.add(new StackedAreaLayout(dataset.columns));
+			vis = new Visualization(data);
+			
+			var header:Array = get_header();
+			
+			vis.operators.add(new StackedAreaLayout(header));
+			
 			vis.data.nodes.visit(function(d:DataSprite):void {
 				d.fillColor = Colors.rgba(0xAA,0xAA,100 + uint(155*Math.random()));
 				d.fillAlpha = 1;
@@ -91,7 +80,6 @@ package
 		
 		public override function resize(b:Rectangle):void {
 			if (vis) {
-				// make some extra room for the treemap border
 				b.x += 1; b.y += 1; b.width -= 1; b.height -= 1;
 				vis.bounds = b;
 				vis.update();
@@ -108,22 +96,27 @@ package
 			vis.update(t).play();
 		}
 		
-		public static function getData(N:int):Object
-		{
-			var cols:Array = [-3,1,3,4,5,6,7,8,9,10];
-			var i:uint, col:String;
+		public function build_data() : Data {
+			var cols:Array = ds.data.table.header;
+			var col:String;
 			
-			var data:Data = new Data();
-			for (i=0; i<N; ++i) {
-				var d:DataSprite = data.addNode();
-				var j:uint = 0, s:Number;
-				for each (col in cols) {
-					s = 1 + int((j++)/2);
-					d.data[col] = s*Math.random();
+			var result:Data = new Data();
+			var data:DataSprite = null;
+			var value:String = null, word:String = null, date:String = null;
+			
+			for each (var row:Object in ds.data.table.rows) {
+				data = result.addNode();
+				word = row.columns[0].value
+				
+				for (var i:uint = 1; i<cols.length; i++) {
+					date  = cols[i];
+					value = row.columns[i].value;
+					
+					data.data[date] = value;
 				}
 			}
 			
-			return { data:data, columns:cols };
+			return result;
 		}
 		
 	} // end of class Stacks
