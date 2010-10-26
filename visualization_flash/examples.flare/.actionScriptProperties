@@ -33,6 +33,7 @@
   </compiler>
   <applications>
     <application path="JugadoresPorPais.as"/>
+    <application path="Tutorial.as"/>
     <application path="Acumulador.as"/>
   </applications>
   <modules/>
