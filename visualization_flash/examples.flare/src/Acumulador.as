@@ -1,14 +1,20 @@
 package 
 {
-	
 	import flare.animate.TransitionEvent;
 	import flare.animate.Transitioner;
 	import flare.data.DataSet;
+	import flare.display.TextSprite;
 	import flare.util.Colors;
 	import flare.util.Shapes;
+	import flare.util.Strings;
 	import flare.vis.Visualization;
+	import flare.vis.controls.HoverControl;
+	import flare.vis.controls.TooltipControl;
 	import flare.vis.data.Data;
 	import flare.vis.data.DataSprite;
+	import flare.vis.data.NodeSprite;
+	import flare.vis.events.SelectionEvent;
+	import flare.vis.events.TooltipEvent;
 	import flare.vis.operator.layout.StackedAreaLayout;
 	
 	import flash.display.Shape;
@@ -75,6 +81,45 @@ package
 				d.shape = Shapes.POLYGON;
 			});
 			
+			// provide tooltip on mouse hover
+			vis.controls.add(new TooltipControl(NodeSprite, null,
+				function(evt:TooltipEvent):void {
+					var text:String = evt.node.name + " MÁXIMO VALOR: ";
+					
+					var valores:Object = evt.node.data;
+					var max:int = 0, max_date:String = "12";
+					
+					for (var name in valores) {
+						if (max < valores[name]) {
+							max_date = name;
+							max = valores[name];
+						}
+					}
+					
+					text += max;
+					
+					text += " EL DÍA: ";
+					text += max_date;
+					
+					TextSprite(evt.tooltip).htmlText = Strings.format(text);
+				}
+			));
+			
+			// highlight nodes on mouse over
+			vis.controls.add(new HoverControl(NodeSprite,
+				// don't change drawing order of nodes
+				HoverControl.MOVE_AND_RETURN,
+				// highlight
+				function(evt:SelectionEvent):void {
+					evt.node.lineColor = 0xffFF0000;
+				},
+				// unhighlight
+				function(evt:SelectionEvent):void {
+					var n:NodeSprite = evt.node;
+					n.lineColor = 0xffcccccc;
+				}
+			));
+			
 			vis.update();
 			addChild(vis);
 			
@@ -115,6 +160,8 @@ package
 			for each (var row:Object in ds.data.table.rows) {
 				word = row.columns[0].value;
 				data = result.addNode();
+				
+				data.name = word;
 				
 				for (var i:uint = 1; i<cols.length; i++) {
 					date  = cols[i];
