@@ -33,7 +33,7 @@ package
 	[SWF(backgroundColor="#ffffff", frameRate="30")]
 	public class JugadoresPorPais extends App
 	{
-		private static var _tipText:String = "<b>{0}</b><br/>{1:,0} bytes";
+		private static var _tipText:String = "<b>{0}</b><br/>{1:,0} repeticiones";
 		
 		private var _src:String =
 			"http://svn.prefuse.org/flare/trunk/flare/flare/src/";
@@ -134,8 +134,8 @@ package
 			// click to hyperlink to source code
 			_vis.controls.add(new ClickControl(NodeSprite, 1,
 				function(evt:SelectionEvent):void {
-					var cls:String = evt.node.data.name;
-					var url:String = _src + cls.split(".").join("/") + ".as";
+					var url:String = evt.node.data.url;
+					
 					navigateToURL(new URLRequest(url), "_code");
 				}
 			));
@@ -181,7 +181,7 @@ package
 				}
 				
 				nodo_hijo = arbol.addChild(paises[pais]);
-				nodo_hijo.data = {name: nombre_jugador, size:repeticiones}; 
+				nodo_hijo.data = {name: nombre_jugador, size:repeticiones, url: "http://www.nba.com/playerfile/kevin_durant/index.html"}; 
 			}
 			
 			return arbol;
