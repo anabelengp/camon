@@ -21,8 +21,8 @@ Material de apoyo para la docencia del Curso de Visualización impartido en Camo
     * [ManyEyes]
     
   * Dia 2: 
-    * [GraphViz] 
-    * [Pajek]
+    * [Taller_graphViz] 
+    * [Raller_pajek]
   * Dia 3
-    * [Gephi]
-    * [TouchGraph]
+    * [Taller_Gephi]
+    * [Taller_touchGraph]
