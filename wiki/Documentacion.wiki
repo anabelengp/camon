@@ -22,7 +22,7 @@ Material de apoyo para la docencia del Curso de Visualización impartido en Camo
     
   * Dia 2: 
     * [Taller_graphViz] 
-    * [Raller_pajek]
+    * [Taller_pajek]
   * Dia 3
     * [Taller_Gephi]
     * [Taller_touchGraph]
