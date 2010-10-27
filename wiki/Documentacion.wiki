@@ -28,7 +28,7 @@ Material de apoyo para la docencia del Curso de Visualización impartido en Camo
 === Grabación ===
 [http://www.tucamon.es/contenido/visualizacion-de-redes http://www.barriblog.com/taller/redes/v%eddeo.jpg]
 
-== Visualizando con Javscript. Día 4 ==
+== Visualizando con Javascript. Día 4 ==
 
 == Visualizando con Java. Día 5 ==
 
