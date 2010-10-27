@@ -15,6 +15,7 @@ Material de apoyo para la docencia del Curso de Visualización impartido en Camo
 === Taller===
    * [ManyEyes]
 
+    [http://www.tucamon.es/contenido/estado-del-arte-y-visualizacion-basica http://www.barriblog.com/taller/redes/v%eddeo.jpg]
 == Visualizando Redes. Días 2 y 3 ==
  [http://www.slideshare.net/mlcm/camon-visualizar20101014 http://www.barriblog.com/taller/redes/ppt-dia-2-3.jpg ]
 
@@ -23,10 +24,10 @@ Material de apoyo para la docencia del Curso de Visualización impartido en Camo
     * [Taller_pajek]
     * [Taller_Gephi]
     * [Taller_touchgraph]
+[http://www.tucamon.es/contenido/visualizacion-de-redes http://www.barriblog.com/taller/redes/v%eddeo.jpg]
 
 == Visualizando con Javscript. Día 4 ==
 
 == Visualizando con Java. Día 5 ==
 
 == Visualizando con flash. Días 6 y 7 ==
-
