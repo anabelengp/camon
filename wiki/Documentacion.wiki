@@ -6,8 +6,10 @@ Material de apoyo para la docencia del Curso de Visualización impartido en Camo
 
 == Presentaciones ==
 
-  * Presentación Dia 1: [http://www.barriblog.com/taller/redes/ppt-dia-1.jpg   http://www.slideshare.net/mlcm/camon-visualizar20101013]
-  * Presentación Dias 2 y 3: [http://www.barriblog.com/taller/redes/ppt-dia-2-3.jpg http://www.slideshare.net/mlcm/camon-visualizar20101014]
+
+ [http://www.slideshare.net/mlcm/camon-visualizar20101013 http://www.barriblog.com/taller/redes/ppt-dia-1.jpg ]
+
+ [http://www.slideshare.net/mlcm/camon-visualizar20101014 http://www.barriblog.com/taller/redes/ppt-dia-2-3.jpg ]
   * Presentación Dia 4:
   * Presentación Dia 5:
   * Presentación Dia 6:
