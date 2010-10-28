@@ -19,25 +19,22 @@
 	
 	<mx:Script>
 		<![CDATA[
+			import mx.collections.ArrayCollection;
+			import mx.collections.ArrayList;
 			import mx.controls.Alert;
 			import mx.events.ListEvent;
 			
 			import org.axiis.data.DataSet;
 			
-			private var ds:DataSet = new DataSet();
+			private var ds:DataSet = null;
 			
 			public function start():void
 			{
+				ds = new DataSet();
+				
+				dc.invalidateDisplayList();
+					
 				ds.processCsvAsTable(payload, false);
-				
-				// ///////////////////
-				// Cambios
-				// //////////////////
-				import mx.collections.ArrayCollection;
-				import mx.collections.ArrayList;
-				import mx.controls.Alert;
-				
-				//Alert.show(row, 'Alert Box', mx.controls.Alert.OK);
 				
 				ds.data.adapted_table = new Object();
 				
@@ -53,6 +50,9 @@
 					var name:String = row.columns[0].value;
 					var date:String = row.columns[1].value;
 					var count:String = row.columns[2].value;
+					
+					if (selected_player(name) == false)
+						continue;
 					
 					var player_info:Object = null;
 					
@@ -112,8 +112,34 @@
 				dc.invalidateDisplayList();
 			}
 			
-			private function compara_jugadores(event:KeyboardEvent) : void {
-				trace (event.ctrlKey);
+			private function selected_player(player:String) : Boolean {
+				var selected_players:Array = jugadores_seleccionados.selectedItems;
+				
+				if (selected_players.length == 0)
+					return true;
+				
+				for each (var selected_player:Object in selected_players) {
+					if (player == selected_player.name)
+						return true;	
+				}
+				
+				return false;
+			}
+			
+			private function compara_jugadores_key_up(event:KeyboardEvent) : void {
+				if (event.keyCode != 17)
+					return;
+				
+				// Comparing several players
+				start();
+			}
+			
+			private function compara_jugadores_click(event:MouseEvent) : void {
+				if (event.ctrlKey)
+					return;
+				
+				// Comparing only one player
+				start();
 			}
 			
 			private function sliceData():void {
@@ -328,9 +354,9 @@
 			<mx:HSlider
 				id="dataSlice"
 				width="80"
-				minimum="3"
-				maximum="220"
-				value="30"
+				minimum="1"
+				maximum="16"
+				value="16"
 				snapInterval="1"
 				change="{sliceData();}"
 				showTrackHighlight="false"
@@ -362,10 +388,10 @@
 	</mx:HBox>
 	
 	
-	<mx:List x="3" dataProvider="{lista_jugadores}" width="86" height="500" 
+	<mx:List id="jugadores_seleccionados" x="3" dataProvider="{lista_jugadores}" width="86" height="500" 
 			 backgroundColor="#B7BABC" y="102" labelField="name"
  			 allowMultipleSelection="true" verticalScrollPolicy="on" 
-			 keyUp="compara_jugadores(event)">
+			 keyUp="compara_jugadores_key_up(event)" click="compara_jugadores_click(event)">
 	</mx:List>
 	
 	<mx:Text x="3" y="83" text="Jugadores:" fontSize="12" height="25"/>
