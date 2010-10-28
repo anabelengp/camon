@@ -36,15 +36,19 @@
  
 	<mx:Script>
 		<![CDATA[
+			import flash.net.navigateToURL;
+			
 			import mx.collections.ArrayCollection;
 			import mx.collections.ArrayList;
 			import mx.collections.IViewCursor;
 			import mx.controls.Alert;
+			import mx.events.SliderEvent;
 			
 			import org.axiis.core.AxiisSprite;
 			import org.axiis.data.DataSet;
+			import org.axiis.events.LayoutItemEvent;
 
-			private var ds:DataSet = new DataSet();
+			private var ds:DataSet = null;
 			
 			private var date_list:ArrayCollection = null;
 			
@@ -74,7 +78,7 @@
 					
 					var agregated_player:Object = new Object();
 					
-					agregated_player.name = "Resto de Jugadores";
+					agregated_player.name = "Resto";
 					agregated_player.count = resting_players_count;
 					
 					players.addItem(agregated_player);
@@ -135,8 +139,12 @@
 				return null;
 			}
 			
-			public function start():void
-			{
+			public function start():void {
+				
+				dc.invalidateDisplayList();
+				
+				ds = new DataSet();
+				
 				ds.processCsvAsTable(payload, false);
 				
 				date_list = new ArrayCollection();
@@ -168,6 +176,12 @@
 				dataProvider = date_list;
 				
 				dc.invalidateDisplayList();
+			}
+			
+			private function num_players_changed(event:SliderEvent	) : void {
+				num_players = Math.round(event.value);
+				
+				start();
 			}
 
 			//Currently not being used - DataTips being refactored
@@ -201,6 +215,21 @@
 			{
 				return Number(val) & -0x333333;
 			}
+
+			protected function show_all_players(event:MouseEvent):void {
+				var selected:Boolean = event.currentTarget.selected;
+				
+				if (selected) {
+					num_players = 50;
+					slider.enabled = false;
+				} else {
+					num_players = slider.value;
+					slider.enabled = true;
+				}
+				
+				start();
+			}
+
 		]]>
 	</mx:Script>
 	<mx:Style source="styles/Axiis_Examples.css"/>
@@ -227,7 +256,7 @@
 	<axiis:NumericExpression id="boundsRadius" value="{Math.min(this.height,this.width)*.7}"/>
 	
 	<!-- Background template -->
-	<Examples:ExampleBackground width="{this.width}" height="{this.height}" title="Wedge Stack Graph" subTitle="Custom Visualization"/>
+	<Examples:ExampleBackground width="{this.width}" height="{this.height}" title="Mundial de Baloncesto Turquia 2010" subTitle="Jugadores mas comentados por dia"/>
 
 	<!-- Data Canvas that holds our geometries -->
 	<axiis:DataCanvas id="dc"
@@ -328,14 +357,12 @@
 		</axiis:strokes>
 			
 	</axiis:DataCanvas>
-
-	<mx:Label fontSize="16"
-		fontFamily="Myriad Pro"
-		htmlText="2008 Olympic Medals"
-		bottom="{height*.025}"
-		horizontalCenter="0"
-		color="0"/>
 	
-	<mx:HSlider x="220" y="19" width="228" height="16" minimum="1" maximum="50"/>
+	<mx:HSlider x="220" y="19" width="309" height="16" 
+				minimum="1" maximum="10" labels="[1,2,3,4,5,6,7,8,9,10]"
+				snapInterval="1" tickInterval="1"
+				change="num_players_changed(event)" id="slider" />
+	
+	<mx:CheckBox x="549" y="19" label="Todos" click="show_all_players(event)"/>
 
 </mx:Application>
