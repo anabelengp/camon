@@ -23,6 +23,96 @@ Funciona para plataformas unix/windows/mac y tiene disponible el código fuente.
 
 Desde [http://code.google.com/p/camon/wiki/Datset los tweets obtenidos] del pasado mundial de Baloncesto se han creado un conjunto de relaciones basadas en la *mención*, es decir los nombres de usuarios twitter que aparecen en el texto del tweet. Dado que el tamaño de la red podría ser demasiado grande para la práctica se han seleccionado los nodos *más mencionados* y los nodos *más activos*. De estos dos conjuntos solo hay un elemento que está en ambos y que es *@turkey2010*, el community manager de la [http://www.fiba.com/pages/eng/fe/10/fwcm/p/index.html web del campeonato]
 
+= Filtros =
+
+Si tenemos los datos en formato CSV separados por ; podríamos aplicar un par de filtros [http://es.wikipedia.org/wiki/AWK awk] para convertirlo en formato dot.
+
+Filtro 1: aplicado a la tabla de nodos:
+
+{{{
+# Datos de entrada: un fichero de texto con los datos de los nodos separados por tabulaciones 
+#    posición de los datos
+#    1:Id 2:Label 3:Group 4:Num Links 5:Links_in 6:links_out 7:Timestamp
+# Solo se van a utilizar los  datos de las tres primeras comumnas
+# Datos de salida: primera parte del fichero en formato dot 
+
+BEGIN {
+# Tratamiento inicial del filtro: se genera la cabecera del fichero dot
+printf "digraph turkey2010 {\n"
+printf "node [shape=plaintext];\n"
+printf "edge [color=Grey];\n"
+# limitación del tamaño del gráfico
+printf "ranksep=\"1.0 equally\"\n"
+printf "nodesep=\"1.0 equally\"\n"
+flag_head="True"
+}
+{
+# tratamiento para cada una de las filas del fichero
+
+  if (flag_head=="False")
+  {
+    Id=$1
+    Label= $2
+    Group= $3
+
+    printf "%s [label=\"%s\"];\n", Id,Label
+    if (Group =="top_mentions")
+      printf "%s [fontcolor=Red];\n",Id
+    if (Group =="top_twitters")
+      printf "%s [fontcolor=darkgreen];\n",Id
+   }
+   flag_head="False"
+ 
+}
+END {
+# tratamiento final del fichero, no hay que hacer nada
+
+}
+
+}}}
+
+
+Filtro 2: aplicado a la tabla de arcos:
+
+{{{
+# Datos de entrada: un fichero de texto con los datos de los arcos separados por tabulaciones 
+#    posición de los datos
+#    1:Source 2:Target 3:Weight 4:Timestamp
+# Solo se van a utilizar los  datos de las dos primeras columnas
+# Datos de salida: segunda parte del fichero en formato dot 
+
+#tratamiento inicial
+BEGIN {
+flag_head="True"
+}
+{
+# tratamiento para cada una de las filas del fichero
+  if (flag_head == "False")
+  {
+    Source=$1
+    Target= $2
+
+    printf "\"%s\" ->\"%s\";\n", Source,Target
+  }
+  flag_head="False"
+}   
+
+END {
+# tratamiento final del fichero, se inserta token de cierre
+printf "}\n"
+
+}
+
+
+}}}
+
+Cómo invocarlos:
+
+{{{
+
+awk -F";" -f node_tab2dot.awk  turkey2010_mentions_top_nodes.csv > turkey2010_top_mentions.dot
+awk -F";" -f arc_tab2dot.awk  turkey2010_mentions_top_arcs.csv >> turkey2010_top_mentions.dot
+}}}
 = Visualización=
 
 == Datos de entrada==
