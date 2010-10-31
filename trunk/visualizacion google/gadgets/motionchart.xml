@@ -111,7 +111,7 @@
     function drawVisualization(data) {
     
       var motionchart = new google.visualization.MotionChart(
-          document.getElementById('visualization'));
+          _gel('visualization'));
       motionchart.draw(data, {'width': 800, 'height': 400});
     }
 
