@@ -1,0 +1,10 @@
+Para visualizar estos ejemplos:
+
+ * AnnotatedTimeline.html y treemap.html:
+pueden ejecutarse directamente en local haciendo doble click sobre ellos.
+ 
+ * MotionChart.html:
+contiene un objeto Flash y únicamente puede visualizarse si se publica en un servidor web.
+Una forma sencilla de visualizarlo es copiando su contenido en el área de pruebas de Google:
+	http://code.google.com/apis/ajax/playground/
+ 
