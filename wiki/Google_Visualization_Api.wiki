@@ -1,0 +1,4 @@
+== Motion Chart ==
+<wiki:gadget url="https://camon.googlecode.com/svn/trunk/visualizacion_google/gadgets/motionchart.xml" height="400" width="800" border="0" />
+
+==Annotated Time Line ==
