@@ -1,4 +1,8 @@
-== Motion Chart ==
+== Motion Char ==
 <wiki:gadget url="https://camon.googlecode.com/svn/trunk/visualizacion_google/gadgets/motionchart.xml" height="400" width="800" border="0" />
 
 ==Annotated Time Line ==
+<wiki:gadget url="https://camon.googlecode.com/svn/trunk/visualizacion_google/gadgets/annotatedTimeLine.xml" height="800" width="1200" border="0" />
+
+== Treemap ==
+<wiki:gadget url="https://camon.googlecode.com/svn/trunk/visualizacion_google/gadgets/treemap.xml" height="400" width="600" border="0" />
