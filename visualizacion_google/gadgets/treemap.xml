@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs title="Treemap" 
+
+    author="Ana Belén García" /> 
+
+  <Content type="html"><![CDATA[
+	
+	 <!-- Load the Google AJAX API. -->
+	 <script src="https://www.google.com/jsapi" type="text/javascript"></script>
+
+	<div id="visualization" style="overflow: auto;"></div>
+
+	<script>
+
+		_IG_RegisterOnloadHandler(loadVisualizationAPI);
+
+		// Load the Google Visualization API
+		function loadVisualizationAPI() {
+		      	google.load('visualization', '1', {'packages': ['treemap']});
+			google.setOnLoadCallback(initialize);
+		}
+
+		    function initialize() {
+          // Query our data source URL.
+          var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=0AvqG-02OdbLbdGNad1JfV1ZiOTdudndXcWVveWZjREE&headers=1');
+                
+          // Send the query with a callback function.
+          query.send(handleQueryResponse);
+        }
+    
+        function handleQueryResponse(response) {
+          // Called when the query response is returned.
+          if (response.isError()) {
+            alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+            return;
+          }
+          //Take the data from the response
+          var data = response.getDataTable();
+          //We want to make some changes to this data:
+          //First, we want to divide one column in two: Team | league
+          var view = separateTeamLeague(data);  
+          //The returned view has this columns now:
+          //Country | Number | Player | Name | Number of mentions | Percentage | Age | Height| Position | Team&League | Team | League
+          //Use only the ones we want and
+          //prepare the data to represent a hierarchy:
+          // hierarchy 1: League - Team - Player --> [11, 10, 2], Size: number of mentions --> 4, Color: height --> 7
+          // hierarchy 2: Country - Player --> [0, 2], Size: number of mentions --> 4, Color: age--> 6
+          hierarchyData1 = transformToHierarchy(view, [11,10,2], 4, 7);
+          hierarchyData2 = transformToHierarchy(view, [0,2], 4, 6);
+                  
+          drawVisualization(hierarchyData1);
+          drawVisualization(hierarchyData2);
+    
+        }
+          
+        function separateTeamLeague(data){
+          var view = new google.visualization.DataView(data);
+          //take the index of the colums. We will need them later on
+          var columns = view.getViewColumns();
+          //add two new columns.
+          //This objects are descriptions of a calculated column.
+          //A calculated column creates a value on the fly for each row
+          //to add it to the view.
+          var newColDef ={calc:takeTeam, type:'string', label:'League team'};
+          function takeTeam (dataTable, rowNum){
+            //column number 9 is the team&league column
+            return dataTable.getValue(rowNum, 9).split(",")[0].trim();
+          }
+          columns.push(newColDef);
+            
+          newColDef = {calc:takeLeague, type:'string', label:'League'};
+          function takeLeague (dataTable, rowNum){
+            //column number 9 is the team&league column
+            return dataTable.getValue(rowNum, 9).split(",")[1].trim();
+          }
+          columns.push(newColDef);
+          //Now set the columns in order to have the two new cols
+          view.setColumns(columns);     
+          
+            return view;
+        }
+            
+        function transformToHierarchy(data, colList, valueForSize,valueForColor) {
+            var parent, sizeValue, colorValue;
+          var view = new google.visualization.DataView(data);
+            //set the columns that are going to be visible:
+          //copy the array colList
+            var columns = colList.slice(0);
+            columns.push(valueForSize);
+            columns.push(valueForColor);
+            view.setColumns(columns);
+            
+            //take the index the columns representing the size and the color have in the new view
+            var sizeColIndex = colList.length;
+            var colorColIndex = colList.length+1;
+            
+            //Create a new DataTable
+            var hierarchyData = new google.visualization.DataTable();
+            hierarchyData.addColumn('string', 'Node');
+            hierarchyData.addColumn('string', 'Parent');
+            hierarchyData.addColumn('number', 'Size');
+            hierarchyData.addColumn('number', 'Color');
+        
+            var value;
+            //for each row of the view
+            for (i = 0;i<view.getNumberOfRows();i++) {
+                //the first colList.length columns of the view are the ones chosen for the hierarchy
+                for(j=0;j<colList.length;j++) {
+                    value = view.getValue(i,j);
+                    //if this value isn't in the new table
+                    if (hierarchyData.getFilteredRows([{column: 0, value: value}]).length == 0){
+                        //if it's the root of the hierarchy
+                        if (j==0){
+                            parent="root";
+                            sizeValue=0;
+                            colorValue=0;
+                        }else{
+                            parent=view.getValue(i,j-1); //the parent of this node will be the value of the previous col
+                            sizeValue=view.getValue(i,sizeColIndex);
+                            colorValue=view.getValue(i,colorColIndex);
+                        }
+                        hierarchyData.addRow([value,parent,sizeValue,colorValue] );
+                    }
+                
+                }
+            }
+            hierarchyData.addRow(["root",null,0,0] );
+            return hierarchyData;
+        }
+          
+	  function drawVisualization(data) {
+	  
+		// Create and draw the visualization.
+		var treemap = new google.visualization.TreeMap(document.getElementById('visualization'));
+		treemap.draw(data, {
+		  minColor: 'red',
+		  midColor: '#ddd',
+		  maxColor: '#0d0',
+		  headerHeight: 15,
+		  fontColor: 'black',
+		  showScale: true});
+	  }
+      
+
+      google.setOnLoadCallback(initialize);
+                      
+      String.prototype.trim = function () {
+        return this.replace(/^\s*/, "").replace(/\s*$/, "");
+      }
+  </script>
+
+  ]]>
+  </Content>
+
+</Module>	
+
+
