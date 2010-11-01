@@ -1,5 +1,9 @@
-Ejemplos utilizados en el taller de visualización en java con Prefuse.
+= Introducción =
+Prefuse es un framework para la realización de visualizaciones en java. Tiene licencia Open Source y proporciona un gran conjunto de componentes extensibles al desarrollador.
 
+En esta sección presentaremos los ejemplos utilizados en el taller de visualización.
+
+= Ejemplos =
 A continuación se exponen los distintos ejemplos utilizados a lo largo del curso. Para probar su funcionamiento hay dos alternativas:
   # Acceder a la sección de descargas:
     * Descargar el fichero prefuse-camon_v1.zip
