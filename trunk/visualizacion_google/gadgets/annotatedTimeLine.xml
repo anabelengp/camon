@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-<ModulePrefs title="Motion Chart" 
- height="400" 
+<ModulePrefs title="Annotated Time Line" 
+
     author="Ana Belén García" /> 
 
   <Content type="html"><![CDATA[
@@ -17,7 +17,7 @@
 
 		// Load the Google Visualization API
 		function loadVisualizationAPI() {
-		      	google.load('visualization', '1', {'packages': ['motionchart']});
+		      	google.load('visualization', '1', {'packages': ['annotatedtimeline']});
 			google.setOnLoadCallback(initialize);
 		}
 
