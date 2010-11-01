@@ -20,4 +20,4 @@ Obtendremos una comparativa de menciones entre países y cuándo se habla más s
 
 == Treemap ==
 
-<wiki:gadget url="https://camon.googlecode.com/svn/trunk/visualizacion_google/gadgets/treemap.xml" height="400" width="600" border="0" />
+<wiki:gadget url="https://camon.googlecode.com/svn/trunk/visualizacion_google/gadgets/treemap.xml" height="1000" width="800" border="0" />
