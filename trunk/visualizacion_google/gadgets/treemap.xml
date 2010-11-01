@@ -10,7 +10,7 @@
 	 <!-- Load the Google AJAX API. -->
 	 <script src="https://www.google.com/jsapi" type="text/javascript"></script>
 
-	<div id="visualization" style="width:600; height:400"></div>
+	<div id="visualization" style="width:800; height:1000"></div>
 
 	<script>
 
