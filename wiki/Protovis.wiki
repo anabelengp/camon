@@ -1,4 +1,6 @@
 = Introducción =
+Protovis es una librería gráfica javascript orientada a la realización de visualizaciones, que proporciona al desarrollador un gran conjunto de componentes y herramientas y otorga al mismo la posibilidad de personalizar sus visualizaciones con un *control detallado*, permitiéndole abstraerse de las tareas básicas de creación de gráficas.
+
 
 = Visualización =
 A continuación se presentan los distintos ejemplos realizados con Protovis. Para poder visualizar los ejemplos únicamente es necesario descargar el código a partir del enlace proporcionado en cada ejemplo y abrirlo con un navegador web (Firefox,...).
