@@ -1,4 +1,7 @@
-== Motion Char ==
+= Introducción =
+Google Visualization API es una librería de visualización open source que permite embeber atractivas visualizaciones en una página web de forma sencilla utilizando el lenguaje Javascript. Esta librería abstrae al desarrollador de los detalles de bajo nivel ofreciendo componentes completos de visualización y herramientas para el manejo de datos. Posee una amplia [http://code.google.com/intl/es-ES/apis/visualization/interactive_charts.html documentación] y está en continuo desarrollo (última versión: Agosto de 2010)En [http://code.google.com/intl/es-ES/apis/visualization/documentation/gallery.html su galería] podemos encontrar una amplia selección de componentes disponibles para ser reutilizados.
+
+== Motion Chart ==
 <wiki:gadget url="https://camon.googlecode.com/svn/trunk/visualizacion_google/gadgets/motionchart.xml" height="400" width="800" border="0" />
 
 ==Annotated Time Line ==
