@@ -133,7 +133,7 @@
 	  function drawVisualization(data) {
 	  
 		// Create and draw the visualization.
-		var treemap = new google.visualization.TreeMap(document.getElementById('visualization'));
+		var treemap = new google.visualization.TreeMap(_gel('visualization'));
 		treemap.draw(data, {
 		  minColor: 'red',
 		  midColor: '#ddd',
