@@ -75,7 +75,7 @@
     function drawVisualization(data) {
       
       var annotatedtimeline = new google.visualization.AnnotatedTimeLine(
-          document.getElementById('visualization'));
+          _gel('visualization'));
       annotatedtimeline.draw(data, {'displayAnnotations': true});
     }
   </script>
