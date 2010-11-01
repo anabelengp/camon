@@ -8,15 +8,15 @@ A continuación se presentan los distintos ejemplos realizados con Protovis. Par
 La fuente de datos indicada en cada uno de los ejemplos será de utilidad para comprobar el formato de los mismos. Sin embargo, modificaciones en dichos datos no redundarán en modificaciones en las visualizaciones, ya que los ejemplos tienen una adaptación de dichos datos incluidos en el código fuente. Esto es debido a que Protovis no proporciona ningún método de interacción con Google Spreadsheets
 
 == Tree Map ==
-* Fuente de datos: Hoja con los datos de los jugadores del mundial [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdGNad1JfV1ZiOTdudndXcWVveWZjREE&hl=en#gid=0 turkey_2010_players]. Tabla players_pais.
-* Código del ejemplo: [https://camon.googlecode.com/svn/trunk/visualizacion_protovis/treemap-full.html treemap.html]
+  * Fuente de datos: Hoja con los datos de los jugadores del mundial [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdGNad1JfV1ZiOTdudndXcWVveWZjREE&hl=en#gid=0 turkey_2010_players]. Tabla players_pais.
+  * Código del ejemplo: [https://camon.googlecode.com/svn/trunk/visualizacion_protovis/treemap-full.html treemap.html]
 
 
 == Bubble Chart ==
-* Fuente de datos: Hoja con los datos de los jugadores del mundial [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdGNad1JfV1ZiOTdudndXcWVveWZjREE&hl=en#gid=0 turkey_2010_players]. Tabla players_pais.
-* Código del ejemplo: [https://camon.googlecode.com/svn/trunk/visualizacion_protovis/bubble-chart.html bubblechart.html]
+  * Fuente de datos: Hoja con los datos de los jugadores del mundial [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdGNad1JfV1ZiOTdudndXcWVveWZjREE&hl=en#gid=0 turkey_2010_players]. Tabla players_pais.
+  * Código del ejemplo: [https://camon.googlecode.com/svn/trunk/visualizacion_protovis/bubble-chart.html bubblechart.html]
 
 
 == Stream Graph ==
-* Fuente de datos: Hoja con los datos de las menciones por hora [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdGVqSmVMWThBc2lNUVRyV1l2V3lkNUE&hl=en#gid=4 turkey_2010_hour_count]. Tabla keywords_hour_count.
-* Código del ejemplo: [https://camon.googlecode.com/svn/trunk/visualizacion_protovis/streamgraph-full.html streamgraph.html]
+  * Fuente de datos: Hoja con los datos de las menciones por hora [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdGVqSmVMWThBc2lNUVRyV1l2V3lkNUE&hl=en#gid=4 turkey_2010_hour_count]. Tabla keywords_hour_count.
+  * Código del ejemplo: [https://camon.googlecode.com/svn/trunk/visualizacion_protovis/streamgraph-full.html streamgraph.html]
