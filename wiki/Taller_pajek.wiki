@@ -88,7 +88,7 @@ http://www.barriblog.com/taller/redes/turkey2010_pajek_fd.jpg
 
 Visualización realizada por *[http://www.vectart.com/ Victor Caballero]*, asistente al curso. El detalle de esta visualización los podéis encontrar en *[http://blog.vectart.com/2010/11/01/visualizando-conversaciones-con-pajek su blog]*.
 
-Tambien ha realizado una interesantísima visualización de las líneas del *metro de Madrid* que explica con *[http://blog.vectart.com/2010/10/29/una-nueva-forma-de-ver-el-metro-de-madrid/ todo detalle]*
+También ha realizado una interesantísima visualización de las líneas del *metro de Madrid* que explica con *[http://blog.vectart.com/2010/10/29/una-nueva-forma-de-ver-el-metro-de-madrid/ todo detalle]*
 
 
 <wiki:video url="http://www.youtube.com/watch?v=WPIngSvJAAI">
