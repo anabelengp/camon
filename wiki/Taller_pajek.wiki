@@ -83,6 +83,15 @@ En la ventana de Draw, seleccionar los distintos layouts y observar las diferenc
 http://www.barriblog.com/taller/redes/turkey2010_pajek_kk.jpg
   * *Energy Fruchterman-Reingold* 
 http://www.barriblog.com/taller/redes/turkey2010_pajek_fd.jpg
+
+== Visualizar en 3D ==
+
+Visualización realizada por *[http://www.vectart.com/ Victor Caballero]*, asistente al curso. El detalle de esta visualización los podéis encontrar en *[http://blog.vectart.com/2010/11/01/visualizando-conversaciones-con-pajek su blog]*.
+
+Tambien ha realizado una interesantísima visualización de las líneas del *metro de Madrid* que explica con *[http://blog.vectart.com/2010/10/29/una-nueva-forma-de-ver-el-metro-de-madrid/ todo detalle]*
+
+
+<wiki:video url="http://www.youtube.com/watch?v=WPIngSvJAAI">
 == Visualizar en el tiempo ==
 
 Volver a la ventana principal y ejecutar el comando
