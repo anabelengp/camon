@@ -16,7 +16,7 @@ Para confeccionar la muestra de datos se han  escogido a España y a los cuatro 
 
 *Resultado*:
 
-<wiki:gadget url="https://camon.googlecode.com/svn/trunk/visualizacion_google/gadgets/motionchart.xml" height="400" width="800" border="0" />
+<wiki:gadget url="http://barriblog.com/taller/javascript/googleAPI/motionchart.xml" height="400" width="800" border="0" />
 
 
 ==Annotated Time Line ==
@@ -34,7 +34,7 @@ Este gráfico muestra el número de menciones de cada país en el tiempo. La uni
 
 *Resultado*:
 
-<wiki:gadget url="https://camon.googlecode.com/svn/trunk/visualizacion_google/gadgets/annotatedTimeLine.xml" height="950" width="1500" border="0" />
+<wiki:gadget url="http://barriblog.com/taller/javascript/googleAPI/annotatedTimeLine.xml" height="950" width="1500" border="0" />
 
 
 
@@ -49,7 +49,7 @@ Esta visualización muestra las menciones que ha tenido cada uno de los jugadore
   * [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdGNad1JfV1ZiOTdudndXcWVveWZjREE&hl=en#gid=0 Turkey2010_players] Tabla _players_pais_. Esta tabla registra la siguiente información sobre cada jugador: País, número de dorsal, nombre completo, nombre de pila, número de menciones, porcentaje del total que representa este número de menciones, edad, altura, posición en la que juega y el Club y la liga en los que juega normalmente. 
 
 
-*Código*:[https://camon.googlecode.com/svn/trunk/visualizacion_google/treemap.html treemap.html]
+*Código*:[http://barriblog.com/taller/javascript/googleAPI/treemap.html treemap.html]
 
 *Resultado*:
 
