@@ -10,6 +10,9 @@ Se pretende cruzar estos datos para obtener una comparativa de menciones contra 
 
 <wiki:gadget url="https://camon.googlecode.com/svn/trunk/visualizacion_google/gadgets/motionchart.xml" height="400" width="800" border="0" />
 
+
+<wiki:gadget url="http://barriblog.com/taller/javascript/googleAPI/motionchart.xml" height="400" width="800" border="0" />
+
 ==Annotated Time Line ==
 Fuente de datos:
   * [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdGVqSmVMWThBc2lNUVRyV1l2V3lkNUE&hl=en#gid=0 Turkey2010_hour_count]. Tabla _country_hour_count_. Tabla de datos que registra el número de menciones por hora y día de los países que recibieron más de 500 menciones en total durante el tiempo que duró el mundial.
@@ -18,9 +21,14 @@ Obtendremos una comparativa de menciones entre países y cuándo se habla más s
 
 <wiki:gadget url="https://camon.googlecode.com/svn/trunk/visualizacion_google/gadgets/annotatedTimeLine.xml" height="800" width="1200" border="0" />
 
+<wiki:gadget url="http://barriblog.com/taller/javascript/googleAPI/annotatedTimeLine.xml" height="800" width="1200" border="0" />
+
+
 == Treemap ==
   * [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdGNad1JfV1ZiOTdudndXcWVveWZjREE&hl=en#gid=0 Turkey2010_players] Tabla _players_pais_. Esta tabla registra la siguiente información sobre cada jugador: País, número de dorsal, nombre completo, nombre de pila, número de menciones, porcentaje del total que representa este número de menciones, edad, altura, posición en la que juega y el Club y la liga en los que juega normalmente. 
 
 Conseguiremos una comparativa sobre el número de menciones a cada jugador teniendo en cuenta diversos criterios: su edad, altura, liga local, equipo local, país... Implícitamente también podremos sacar conclusiones sobre los países participantes en el mundial siguiendo los criterios anteriores.
 
 <wiki:gadget url="https://camon.googlecode.com/svn/trunk/visualizacion_google/gadgets/treemap.xml" height="1000" width="800" border="0" />
+
+<wiki:gadget url="http://barriblog.com/taller/javascript/googleAPI/treemap.xml" height="1000" width="800" border="0" />
