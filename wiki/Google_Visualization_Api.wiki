@@ -30,7 +30,7 @@ Este gráfico muestra el número de menciones de cada país en el tiempo. La uni
 *Fuente de datos*:
   * [https://spreadsheets.google.com/ccc?key=0AvqG-02OdbLbdGVqSmVMWThBc2lNUVRyV1l2V3lkNUE&hl=en#gid=0 Turkey2010_hour_count]. Tabla _country_hour_count_. Tabla de datos que registra el número de menciones por hora y día de los países que recibieron más de 500 menciones en total durante el tiempo que duró el mundial.
 
-*Código*:[https://camon.googlecode.com/svn/trunk/visualizacion_google/annotatedTimeline.html]
+*Código*:[https://camon.googlecode.com/svn/trunk/visualizacion_google/annotatedTimeline.html annotatedTimeline.html]
 
 
 *Resultado*:
