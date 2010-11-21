@@ -32,6 +32,7 @@ Este gráfico muestra el número de menciones de cada país en el tiempo. La uni
 
 *Código*:[https://camon.googlecode.com/svn/trunk/visualizacion_google/annotatedTimeLine.html annotatedTimeLine.html]
 
+
 *Resultado*:
 
 <wiki:gadget url="http://barriblog.com/taller/javascript/googleAPI/annotatedTimeLine.xml" height="950" width="1500" border="0" />
